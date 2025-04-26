@@ -1,0 +1,30 @@
+[
+  {
+    "name": "dashboard",
+    "remoteEntry": "http://localhost:4204/remoteEntry.js",
+    "exposedModule": "./DashboardModule",
+    "routePath": "",
+    "isDefault": true
+  },
+  {
+    "name": "cart",
+    "remoteEntry": "http://localhost:4202/remoteEntry.js",
+    "exposedModule": "./CartModule",
+    "routePath": "cart",
+    "isDefault": false
+  },
+  {
+    "name": "shop",
+    "remoteEntry": "http://localhost:4201/remoteEntry.js",
+    "exposedModule": "./ShopModule",
+    "routePath": "shop",
+    "isDefault": false
+  },
+  {
+    "name": "about",
+    "remoteEntry": "http://localhost:4203/remoteEntry.js",
+    "exposedModule": "./AboutModule",
+    "routePath": "about",
+    "isDefault": false
+  }
+]

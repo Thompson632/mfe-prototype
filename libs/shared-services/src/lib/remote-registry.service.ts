@@ -8,20 +8,19 @@ declare const __webpack_share_scopes__: any;
   providedIn: 'root'
 })
 export class RemoteRegistryService {
-  constructor(private router: Router) {}
+  constructor() {}
 
-  async loadDefaultRemote() {
+  async loadDefaultRemote(router: Router) {
     const response = await fetch('/assets/remotes.json');
     const remotes = await response.json();
 
     const defaultRemote = remotes.find((r: any) => r.isDefault);
 
     if (defaultRemote) {
-      this.router.resetConfig([
+      router.resetConfig([
         {
           path: '',
-          loadChildren: () =>
-            loadRemoteModule(defaultRemote).then((m) => m[Object.keys(m)[0]])
+          loadChildren: () => loadRemoteModule(defaultRemote).then((m) => m[Object.keys(m)[0]])
         }
       ]);
     }
