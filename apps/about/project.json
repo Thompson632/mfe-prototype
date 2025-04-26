@@ -30,6 +30,7 @@
       },
       "configurations": {
         "production": {
+          "outputPath": "dist/apps/about",
           "budgets": [
             {
               "type": "initial",
@@ -48,6 +49,7 @@
           }
         },
         "development": {
+          "outputPath": "dist/apps/about",
           "buildOptimizer": false,
           "optimization": false,
           "vendorChunk": true,
@@ -59,10 +61,12 @@
       "defaultConfiguration": "production"
     },
     "serve": {
-      "executor": "@nx/angular:dev-server",
+      "executor": "@nx/angular:webpack-server",
       "options": {
+        "buildTarget": "about:build",
         "port": 4203,
-        "publicHost": "http://localhost:4203"
+        "publicHost": "http://localhost:4203",
+        "devRemotes": []
       },
       "configurations": {
         "production": {
@@ -85,11 +89,11 @@
     },
     "serve-static": {
       "executor": "@nx/web:file-server",
-      "defaultConfiguration": "production",
       "options": {
         "buildTarget": "about:build",
         "port": 4203,
-        "watch": false
+        "watch": false,
+        "spa": true
       },
       "configurations": {
         "development": {
