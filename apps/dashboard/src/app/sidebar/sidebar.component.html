@@ -1,0 +1,5 @@
+<aside class="sidebar">
+  <button *ngFor="let remote of remotes" (click)="navigateToRemote(remote)">
+    Open {{ remote.name | titlecase }}
+  </button>
+</aside>

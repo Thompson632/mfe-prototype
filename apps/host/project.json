@@ -32,7 +32,8 @@
         "scripts": [],
         "customWebpackConfig": {
           "path": "apps/host/webpack.config.ts"
-        }
+        },
+        "allowedCommonJsDependencies": ["lodash"]
       },
       "configurations": {
         "production": {

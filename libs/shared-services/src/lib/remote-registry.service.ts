@@ -9,8 +9,6 @@ import { RemoteApp } from './remote-app.model';
 export class RemoteRegistryService {
   private static readonly REMOTES_JSON = 'remotes.json';
 
-  constructor() {}
-
   async loadDefaultRemote(router: Router) {
     const response = await fetch(RemoteRegistryService.REMOTES_JSON);
     const remotes: RemoteApp[] = await response.json();
@@ -18,13 +16,14 @@ export class RemoteRegistryService {
     const defaultRemote = remotes.find((r) => r.isDefault);
 
     if (defaultRemote) {
-      console.log(`Building default route as: [${defaultRemote.name}/${defaultRemote.exposedModule.replace('./', '')}]`)
+      const remotePath = `${defaultRemote.name}/${defaultRemote.exposedModule.replace('./', '')}`;
+      console.log(`Building default route as: [${remotePath}]`);
+
       router.resetConfig([
         {
           path: '',
           loadChildren: () =>
-            loadRemote(`${defaultRemote.name}/${defaultRemote.exposedModule.replace('./', '')}`)
-              .then((m: any) => m!.remoteRoutes)
+            loadRemote(remotePath).then((m: any) => m.remoteRoutes)
         }
       ]);
     }

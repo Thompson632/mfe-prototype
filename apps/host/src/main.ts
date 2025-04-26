@@ -1,13 +1,16 @@
-
 import { init } from '@module-federation/enhanced/runtime';
-import { RemoteApp } from '@mfe-prototype/shared-services';
 
 fetch('remotes.json')
   .then((response) => response.json())
-  .then((remotes: RemoteApp[]) =>
-    remotes
-      .filter((remote) => remote.isDefault)
-      .map(({ name, remoteEntry }) => ({ name, entry: remoteEntry }))
-  )
-  .then((remotes) => init({ name: 'host', remotes }))
-  .then(() => import('./bootstrap').catch((err) => console.error(err)));
+  .then((remotes) => {
+    const manifest = remotes.map((remote: any) => ({
+      name: remote.name,
+      entry: remote.remoteEntry
+    }));
+
+    console.log('Remotes Manifest:', JSON.stringify(manifest, null, 2));
+
+    return init({ name: 'host', remotes: manifest });
+  })
+  .then(() => import('./bootstrap'))
+  .catch((err) => console.error(err));

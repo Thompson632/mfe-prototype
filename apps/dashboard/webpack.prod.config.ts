@@ -1,4 +1,4 @@
-import { withModuleFederation } from '@nx/module-federation/angular';
+import { withModuleFederation } from '@nx/module-federation/webpack';
 import config from './module-federation.config';
 
 /**
