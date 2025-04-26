@@ -16,6 +16,12 @@
     "baseUrl": ".",
     "paths": {
       "@mfe-prototype/shared-services": ["libs/shared-services/src/index.ts"],
+      "about/Routes": ["apps/about/src/app/remote-entry/entry.routes.ts"],
+      "cart/Routes": ["apps/cart/src/app/remote-entry/entry.routes.ts"],
+      "dashboard/Routes": [
+        "apps/dashboard/src/app/remote-entry/entry.routes.ts"
+      ],
+      "shop/Routes": ["apps/shop/src/app/remote-entry/entry.routes.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
