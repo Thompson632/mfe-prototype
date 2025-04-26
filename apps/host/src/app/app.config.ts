@@ -1,23 +1,28 @@
-import { ApplicationConfig, inject, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter, Router } from '@angular/router';
+import { ApplicationConfig, APP_INITIALIZER, inject, provideZoneChangeDetection } from '@angular/core';
 import { provideHttpClient } from '@angular/common/http';
-import { RemoteRegistryService } from '@mfe-prototype/shared-services';
+import { provideRouter, Router } from '@angular/router';
 import { appRoutes } from './app.routes';
+import { RemoteRegistryService } from '@mfe-prototype/shared-services';
+
+export function initDefaultRemote() {
+  return () => {
+    const remoteService = inject(RemoteRegistryService);
+    const router = inject(Router);
+    return remoteService.loadDefaultRemote(router);
+  };
+}
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideHttpClient(),
     provideRouter(appRoutes),
+    RemoteRegistryService,
     {
-      provide: 'APP_INITIALIZER',
-      useFactory: () => {
-        const service = inject(RemoteRegistryService);
-        const router = inject(Router);
-        return () => service.loadDefaultRemote(router);
-      },
-      deps: [],
-      multi: true
+      provide: APP_INITIALIZER,
+      useFactory: initDefaultRemote,
+      multi: true,
+      deps: []
     }
   ]
 };

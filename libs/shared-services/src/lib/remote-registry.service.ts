@@ -1,41 +1,37 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-
-declare const __webpack_init_sharing__: any;
-declare const __webpack_share_scopes__: any;
+import { loadRemote } from '@module-federation/enhanced/runtime';
+import { RemoteApp } from './remote-app.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RemoteRegistryService {
+  private static readonly REMOTES_JSON = 'remotes.json';
+
   constructor() {}
 
   async loadDefaultRemote(router: Router) {
-    const response = await fetch('/assets/remotes.json');
-    const remotes = await response.json();
+    const response = await fetch(RemoteRegistryService.REMOTES_JSON);
+    const remotes: RemoteApp[] = await response.json();
 
-    const defaultRemote = remotes.find((r: any) => r.isDefault);
+    const defaultRemote = remotes.find((r) => r.isDefault);
 
     if (defaultRemote) {
+      console.log(`Building default route as: [${defaultRemote.name}/${defaultRemote.exposedModule.replace('./', '')}]`)
       router.resetConfig([
         {
           path: '',
-          loadChildren: () => loadRemoteModule(defaultRemote).then((m) => m[Object.keys(m)[0]])
+          loadChildren: () =>
+            loadRemote(`${defaultRemote.name}/${defaultRemote.exposedModule.replace('./', '')}`)
+              .then((m: any) => m!.remoteRoutes)
         }
       ]);
     }
   }
 
-  async fetchRemotes() {
-    const response = await fetch('/assets/remotes.json');
+  async fetchRemotes(): Promise<RemoteApp[]> {
+    const response = await fetch(RemoteRegistryService.REMOTES_JSON);
     return await response.json();
   }
-}
-
-async function loadRemoteModule(remote: any) {
-  await __webpack_init_sharing__('default');
-  const container = (window as any)[remote.name];
-  await container.init(__webpack_share_scopes__.default);
-  const factory = await container.get(remote.exposedModule);
-  return factory();
 }

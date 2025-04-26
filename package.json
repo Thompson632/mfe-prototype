@@ -2,7 +2,11 @@
   "name": "@mfe-prototype/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "nx run-many --target=serve --projects=host,dashboard,cart,shop,about --parallel --max-parallel=5",
+    "build": "nx run-many --target=build --projects=host,dashboard,cart,shop,about --configuration=production --parallel --max-parallel=5",
+    "deploy": "npm run build && npx gh-pages -d dist/apps/host"
+  },
   "private": true,
   "devDependencies": {
     "@angular-devkit/build-angular": "~19.2.0",

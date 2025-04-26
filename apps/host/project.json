@@ -19,7 +19,13 @@
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/host/public"
+            "input": "apps/host/public",
+            "output": "/"
+          },
+          {
+            "glob": "**/*",
+            "input": "apps/host/src/assets",
+            "output": "assets"
           }
         ],
         "styles": ["apps/host/src/styles.scss"],

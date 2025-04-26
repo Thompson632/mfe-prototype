@@ -1,0 +1,26 @@
+[
+  {
+    "name": "cart",
+    "remoteEntry": "http://localhost:4202/remoteEntry.js",
+    "exposedModule": "./Routes",
+    "routePath": "cart",
+    "isDefault": false,
+    "version": "1.0.0"
+  },
+  {
+    "name": "shop",
+    "remoteEntry": "http://localhost:4201/remoteEntry.js",
+    "exposedModule": "./Routes",
+    "routePath": "shop",
+    "isDefault": false,
+    "version": "1.0.0"
+  },
+  {
+    "name": "about",
+    "remoteEntry": "http://localhost:4203/remoteEntry.js",
+    "exposedModule": "./Routes",
+    "routePath": "about",
+    "isDefault": false,
+    "version": "1.0.0"
+  }
+]
