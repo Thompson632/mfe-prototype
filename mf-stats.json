@@ -1,8 +1,8 @@
 {
-  "id": "shop",
-  "name": "shop",
+  "id": "about",
+  "name": "about",
   "metaData": {
-    "name": "shop",
+    "name": "about",
     "type": "app",
     "buildInfo": {
       "buildVersion": "0.0.0",
@@ -19,7 +19,7 @@
       "zip": "",
       "api": ""
     },
-    "globalName": "shop",
+    "globalName": "about",
     "pluginVersion": "0.9.1",
     "prefetchInterface": false,
     "publicPath": "auto"
@@ -33,16 +33,16 @@
       "name": "@angular/common/http",
       "version": "19.2.8",
       "eager": false,
-      "id": "shop:@angular/common/http",
+      "id": "about:@angular/common/http",
       "assets": {
         "js": {
           "async": [
-            "353.e87fb3a8d3a2aa63.js",
-            "common.c5ceff156609c384.js",
-            "716.214bfc51f3e14a36.js"
+            "353.190478547399b496.js",
+            "common.eecefdf1ae8b2141.js",
+            "716.4a341c2b428f6ba2.js"
           ],
           "sync": [
-            "305.06c77d1ffd6ca30c.js"
+            "305.a7efbb5dd12f58f2.js"
           ]
         },
         "css": {
@@ -60,16 +60,16 @@
       "name": "@angular/common",
       "version": "19.2.8",
       "eager": false,
-      "id": "shop:@angular/common",
+      "id": "about:@angular/common",
       "assets": {
         "js": {
           "async": [
-            "353.e87fb3a8d3a2aa63.js",
-            "common.c5ceff156609c384.js",
-            "716.214bfc51f3e14a36.js"
+            "353.190478547399b496.js",
+            "common.eecefdf1ae8b2141.js",
+            "716.4a341c2b428f6ba2.js"
           ],
           "sync": [
-            "274.c742e92f354469aa.js"
+            "274.9a092741b961c73f.js"
           ]
         },
         "css": {
@@ -87,16 +87,16 @@
       "name": "@angular/core/primitives/di",
       "version": "19.2.8",
       "eager": false,
-      "id": "shop:@angular/core/primitives/di",
+      "id": "about:@angular/core/primitives/di",
       "assets": {
         "js": {
           "async": [
-            "274.c742e92f354469aa.js",
-            "353.e87fb3a8d3a2aa63.js",
-            "716.214bfc51f3e14a36.js"
+            "274.9a092741b961c73f.js",
+            "353.190478547399b496.js",
+            "716.4a341c2b428f6ba2.js"
           ],
           "sync": [
-            "common.c5ceff156609c384.js"
+            "common.eecefdf1ae8b2141.js"
           ]
         },
         "css": {
@@ -114,16 +114,16 @@
       "name": "@angular/core/primitives/signals",
       "version": "19.2.8",
       "eager": false,
-      "id": "shop:@angular/core/primitives/signals",
+      "id": "about:@angular/core/primitives/signals",
       "assets": {
         "js": {
           "async": [
-            "274.c742e92f354469aa.js",
-            "353.e87fb3a8d3a2aa63.js",
-            "716.214bfc51f3e14a36.js"
+            "274.9a092741b961c73f.js",
+            "353.190478547399b496.js",
+            "716.4a341c2b428f6ba2.js"
           ],
           "sync": [
-            "common.c5ceff156609c384.js"
+            "common.eecefdf1ae8b2141.js"
           ]
         },
         "css": {
@@ -141,12 +141,12 @@
       "name": "@angular/core",
       "version": "19.2.8",
       "eager": false,
-      "id": "shop:@angular/core",
+      "id": "about:@angular/core",
       "assets": {
         "js": {
           "async": [],
           "sync": [
-            "716.214bfc51f3e14a36.js"
+            "716.4a341c2b428f6ba2.js"
           ]
         },
         "css": {
@@ -164,19 +164,19 @@
       "name": "@angular/platform-browser",
       "version": "19.2.8",
       "eager": false,
-      "id": "shop:@angular/platform-browser",
+      "id": "about:@angular/platform-browser",
       "assets": {
         "js": {
           "async": [
-            "274.c742e92f354469aa.js",
-            "353.e87fb3a8d3a2aa63.js",
-            "common.c5ceff156609c384.js",
-            "716.214bfc51f3e14a36.js",
-            "203.b7d302d3daa3ab99.js",
-            "305.06c77d1ffd6ca30c.js"
+            "274.9a092741b961c73f.js",
+            "353.190478547399b496.js",
+            "common.eecefdf1ae8b2141.js",
+            "716.4a341c2b428f6ba2.js",
+            "203.26db76272dfc7768.js",
+            "305.a7efbb5dd12f58f2.js"
           ],
           "sync": [
-            "463.20ec5e5225d56200.js"
+            "463.4200e1c8d5f2bd5b.js"
           ]
         },
         "css": {
@@ -194,19 +194,19 @@
       "name": "@angular/router",
       "version": "19.2.8",
       "eager": false,
-      "id": "shop:@angular/router",
+      "id": "about:@angular/router",
       "assets": {
         "js": {
           "async": [
-            "274.c742e92f354469aa.js",
-            "353.e87fb3a8d3a2aa63.js",
-            "common.c5ceff156609c384.js",
-            "716.214bfc51f3e14a36.js",
-            "463.20ec5e5225d56200.js",
-            "305.06c77d1ffd6ca30c.js"
+            "274.9a092741b961c73f.js",
+            "353.190478547399b496.js",
+            "common.eecefdf1ae8b2141.js",
+            "716.4a341c2b428f6ba2.js",
+            "463.4200e1c8d5f2bd5b.js",
+            "305.a7efbb5dd12f58f2.js"
           ],
           "sync": [
-            "256.f9e19320d824f857.js"
+            "256.e192708f595c79dd.js"
           ]
         },
         "css": {
@@ -221,10 +221,10 @@
   "exposes": [
     {
       "path": "./Routes",
-      "id": "shop:Routes",
+      "id": "about:Routes",
       "name": "Routes",
       "requires": [],
-      "file": "apps/shop/src/app/remote-entry/entry.routes.ts",
+      "file": "apps/about/src/app/remote-entry/entry.routes.ts",
       "assets": {
         "js": {
           "async": [],
