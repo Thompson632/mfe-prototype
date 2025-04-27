@@ -11,3 +11,11 @@
   height: 40px;
   margin-right: 10px;
 }
+
+.logo-link, .title-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  cursor: pointer; /* 👈 pointer on hover */
+}

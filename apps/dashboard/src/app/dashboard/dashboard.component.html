@@ -1,5 +1,12 @@
 <app-topbar />
+
 <div class="layout">
   <app-sidebar />
-  <router-outlet></router-outlet>
+  <main class="dashboard-main">
+    <div *ngIf="isLoading" class="loading-spinner">
+      Loading dashboard modules...
+    </div>
+
+    <router-outlet *ngIf="!isLoading"></router-outlet>
+  </main>
 </div>

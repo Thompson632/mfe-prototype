@@ -20,6 +20,11 @@
           {
             "glob": "**/*",
             "input": "apps/dashboard/public"
+          },
+          {
+            "glob": "**/*",
+            "input": "apps/dashboard/src/assets",
+            "output": "assets"
           }
         ],
         "styles": ["apps/dashboard/src/styles.scss"],

@@ -1,26 +1,20 @@
 [
   {
     "name": "cart",
-    "remoteEntry": "http://localhost:4202/remoteEntry.mjs",
+    "remoteEntry": "http://localhost:4202/mf-manifest.json",
     "exposedModule": "./Routes",
-    "routePath": "cart",
-    "isDefault": false,
-    "version": "1.0.0"
+    "routePath": "cart"
   },
   {
     "name": "shop",
-    "remoteEntry": "http://localhost:4203/remoteEntry.mjs",
+    "remoteEntry": "http://localhost:4203/mf-manifest.json",
     "exposedModule": "./Routes",
-    "routePath": "shop",
-    "isDefault": false,
-    "version": "1.0.0"
+    "routePath": "shop"
   },
   {
     "name": "about",
-    "remoteEntry": "http://localhost:4204/remoteEntry.mjs",
+    "remoteEntry": "http://localhost:4204/mf-manifest.json",
     "exposedModule": "./Routes",
-    "routePath": "about",
-    "isDefault": false,
-    "version": "1.0.0"
+    "routePath": "about"
   }
 ]

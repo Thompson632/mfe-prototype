@@ -29,15 +29,11 @@ export class SidebarComponent implements OnInit {
   }
 
   async navigateToRemote(remote: RemoteApp) {
-    if (remote.isDefault) {
-      this.router.navigateByUrl('/');
-      return;
-    }
-
     try {
       this.isLoading = true;
       const routeId = `${remote.name}/${remote.exposedModule.replace('./', '')}`;
       console.log("Trying to load", routeId)
+      // TODO: Add logic if it's already loaded, just return it
       await loadRemote(routeId);
       this.isLoading = false;
       this.router.navigateByUrl(`/${remote.routePath}`);

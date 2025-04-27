@@ -12,7 +12,7 @@ export class RemoteStatusService {
 
   async checkStatuses(remotes: any[]) {
     const checks = remotes.map(async (remote) => {
-      const healthUrl = remote.remoteEntry.replace('remoteEntry.mjs', 'healthz');
+      const healthUrl = remote.remoteEntry.replace('mf-manifest.json', 'healthz');
       try {
         const res = await this.http.get(healthUrl, { responseType: 'text' }).toPromise();
         const healthy = res === 'OK';

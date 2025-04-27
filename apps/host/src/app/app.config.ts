@@ -8,7 +8,7 @@ export function initDefaultRemote() {
   return () => {
     const remoteService = inject(RemoteRegistryService);
     const router = inject(Router);
-    return remoteService.loadDefaultRemote(router);
+    return remoteService.initDefaultRoute(router);
   };
 }
 

@@ -1,5 +1,5 @@
 <aside class="sidebar">
-  <button *ngFor="let remote of remotes" (click)="navigateToRemote(remote)">
+  <button *ngFor="let remote of remotes" (click)="navigateToRemote(remote)" class="sidebar-button">
     Open {{ remote.name | titlecase }}
   </button>
 </aside>

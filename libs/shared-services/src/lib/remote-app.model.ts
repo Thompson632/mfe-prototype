@@ -3,6 +3,4 @@ export interface RemoteApp {
   remoteEntry: string;
   exposedModule: string;
   routePath: string;
-  isDefault: boolean;
-  version: string;
 }

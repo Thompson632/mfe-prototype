@@ -7,13 +7,14 @@ import { RemoteApp } from './remote-app.model';
   providedIn: 'root'
 })
 export class RemoteRegistryService {
+  private static readonly DEFAULT_LAYOUT = 'dashboard';
   private static readonly REMOTES_JSON = 'remotes.json';
 
-  async loadDefaultRemote(router: Router) {
+  async initDefaultRoute(router: Router) {
     const response = await fetch(RemoteRegistryService.REMOTES_JSON);
     const remotes: RemoteApp[] = await response.json();
 
-    const defaultRemote = remotes.find((r) => r.isDefault);
+    const defaultRemote = remotes.find((r) => r.name === RemoteRegistryService.DEFAULT_LAYOUT);
 
     if (defaultRemote) {
       const remotePath = `${defaultRemote.name}/${defaultRemote.exposedModule.replace('./', '')}`;
@@ -31,6 +32,7 @@ export class RemoteRegistryService {
 
   async fetchRemotes(): Promise<RemoteApp[]> {
     const response = await fetch(RemoteRegistryService.REMOTES_JSON);
-    return await response.json();
+    const remotes = (await response.json()) as RemoteApp[];
+      return remotes.filter(remote => remote.name !== RemoteRegistryService.DEFAULT_LAYOUT);
   }
 }
