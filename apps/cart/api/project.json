@@ -1,0 +1,24 @@
+{
+  "name": "cart-api",
+  "projectType": "application",
+  "root": "apps/cart/api",
+  "sourceRoot": "apps/cart/api/src",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/cart-api",
+        "main": "apps/cart/api/src/main.ts",
+        "tsConfig": "apps/cart/api/tsconfig.app.json",
+        "assets": []
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "options": {
+        "buildTarget": "cart-api:build"
+      }
+    }
+  }
+}

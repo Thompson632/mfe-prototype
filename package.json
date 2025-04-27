@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nx run-many --target=serve --projects=host,dashboard,cart,shop,about --parallel --max-parallel=5",
+    "api": "nx run-many --target=serve --projects=dashboard-api,cart-api,shop-api,about-api --parallel --max-parallel=5",
     "build": "nx run-many --target=build --projects=host,dashboard,cart,shop,about --configuration=production --parallel --max-parallel=5",
     "deploy": "npm run build && npx gh-pages -d dist/apps/host"
   },
@@ -19,6 +20,7 @@
     "@module-federation/enhanced": "^0.9.0",
     "@nx/eslint": "20.8.1",
     "@nx/eslint-plugin": "20.8.1",
+    "@nx/express": "^20.8.1",
     "@nx/js": "20.8.1",
     "@nx/module-federation": "20.8.1",
     "@nx/web": "20.8.1",
@@ -28,6 +30,7 @@
     "@swc-node/register": "~1.9.1",
     "@swc/core": "~1.5.7",
     "@swc/helpers": "~0.5.11",
+    "@types/cors": "^2.8.17",
     "@typescript-eslint/utils": "^8.19.0",
     "angular-eslint": "^19.2.0",
     "eslint": "^9.8.0",
@@ -46,8 +49,10 @@
     "@angular/platform-browser": "~19.2.0",
     "@angular/platform-browser-dynamic": "~19.2.0",
     "@angular/router": "~19.2.0",
+    "@nx/angular": "20.8.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
     "rxjs": "~7.8.0",
-    "zone.js": "~0.15.0",
-    "@nx/angular": "^20.8.1"
+    "zone.js": "~0.15.0"
   }
 }

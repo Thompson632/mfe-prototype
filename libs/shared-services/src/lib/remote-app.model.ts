@@ -3,4 +3,5 @@ export interface RemoteApp {
   remoteEntry: string;
   exposedModule: string;
   routePath: string;
+  healthUrl: string;
 }

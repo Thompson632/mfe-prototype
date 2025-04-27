@@ -1,0 +1,24 @@
+{
+  "name": "dashboard-api",
+  "projectType": "application",
+  "root": "apps/dashboard/api",
+  "sourceRoot": "apps/dashboard/api/src",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/dashboard-api",
+        "main": "apps/dashboard/api/src/main.ts",
+        "tsConfig": "apps/dashboard/api/tsconfig.app.json",
+        "assets": []
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "options": {
+        "buildTarget": "dashboard-api:build"
+      }
+    }
+  }
+}
