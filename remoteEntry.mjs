@@ -1384,7 +1384,7 @@ var helpers = {
 };
 function getBuilderId() {
   //@ts-ignore
-  return  true ? "cart:0.0.0" : 0;
+  return  true ? "shop:0.0.0" : 0;
 }
 
 // Function to match a remote with its name and expose
@@ -4722,45 +4722,6 @@ exports.typeDescMap = typeDescMap;
 
 /***/ }),
 
-/***/ 3849:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-var moduleMap = {
-	"./Routes": () => {
-		return Promise.all(/* __federation_expose_Routes */[__webpack_require__.e(46), __webpack_require__.e(124), __webpack_require__.e(661), __webpack_require__.e(76)]).then(() => (() => ((__webpack_require__(4538)))));
-	}
-};
-var get = (module, getScope) => {
-	__webpack_require__.R = getScope;
-	getScope = (
-		__webpack_require__.o(moduleMap, module)
-			? moduleMap[module]()
-			: Promise.resolve().then(() => {
-				throw new Error('Module "' + module + '" does not exist in container.');
-			})
-	);
-	__webpack_require__.R = undefined;
-	return getScope;
-};
-var init = (shareScope, initScope, remoteEntryInitOptions) => {
-	return __webpack_require__.federation.bundlerRuntime.initContainerEntry({	webpackRequire: __webpack_require__,
-		shareScope: shareScope,
-		initScope: initScope,
-		remoteEntryInitOptions: remoteEntryInitOptions,
-		shareScopeKey: "default"
-	})
-};
-
-__webpack_require__(8055)
-
-// This exports getters to disallow modifications
-__webpack_require__.d(exports, {
-	get: () => (get),
-	init: () => (init)
-});
-
-/***/ }),
-
 /***/ 3879:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -4771,7 +4732,7 @@ var runtimeCore = __webpack_require__(3464);
 // injected by bundler, so it can not use runtime-core stuff
 function getBuilderId() {
   //@ts-ignore
-  return  true ? "cart:0.0.0" : 0;
+  return  true ? "shop:0.0.0" : 0;
 }
 function getGlobalFederationInstance(name, version) {
   const buildId = getBuilderId();
@@ -4941,6 +4902,45 @@ module.exports = _asyncToGenerator, module.exports.__esModule = true, module.exp
 
 /***/ }),
 
+/***/ 6579:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+var moduleMap = {
+	"./Routes": () => {
+		return Promise.all(/* __federation_expose_Routes */[__webpack_require__.e(46), __webpack_require__.e(124), __webpack_require__.e(947), __webpack_require__.e(76)]).then(() => (() => ((__webpack_require__(4984)))));
+	}
+};
+var get = (module, getScope) => {
+	__webpack_require__.R = getScope;
+	getScope = (
+		__webpack_require__.o(moduleMap, module)
+			? moduleMap[module]()
+			: Promise.resolve().then(() => {
+				throw new Error('Module "' + module + '" does not exist in container.');
+			})
+	);
+	__webpack_require__.R = undefined;
+	return getScope;
+};
+var init = (shareScope, initScope, remoteEntryInitOptions) => {
+	return __webpack_require__.federation.bundlerRuntime.initContainerEntry({	webpackRequire: __webpack_require__,
+		shareScope: shareScope,
+		initScope: initScope,
+		remoteEntryInitOptions: remoteEntryInitOptions,
+		shareScopeKey: "default"
+	})
+};
+
+__webpack_require__(8055)
+
+// This exports getters to disallow modifications
+__webpack_require__.d(exports, {
+	get: () => (get),
+	init: () => (init)
+});
+
+/***/ }),
+
 /***/ 8055:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
@@ -5018,7 +5018,7 @@ if(!__webpack_require__.federation.instance){
 /******/ (() => {
 /******/ 	if(!__webpack_require__.federation){
 /******/ 		__webpack_require__.federation = {
-/******/ 			initOptions: {"name":"cart","remotes":[],"shareStrategy":"version-first"},
+/******/ 			initOptions: {"name":"shop","remotes":[],"shareStrategy":"version-first"},
 /******/ 			chunkMatcher: function(chunkId) {return !/^(124|287|46)$/.test(chunkId)},
 /******/ 			rootOutputDir: "",
 /******/ 			initialConsumes: undefined,
@@ -5069,7 +5069,7 @@ if(!__webpack_require__.federation.instance){
 /******/ 	// This function allow to reference async chunks
 /******/ 	__webpack_require__.u = (chunkId) => {
 /******/ 		// return url for filenames based on template
-/******/ 		return "" + (chunkId === 76 ? "common" : chunkId) + "." + {"76":"2c8859d4335cf081","203":"5ee0e9674e2782d6","256":"d3a7887e6f31f452","274":"197b2d59874925f0","305":"d9c16b4c838a23bb","353":"43aa3bb2b7c91ad1","463":"2e52f2c98d68c817","661":"db43fedbd3006f4f","716":"f157b2d07680c3ef"}[chunkId] + ".js";
+/******/ 		return "" + (chunkId === 76 ? "common" : chunkId) + "." + {"76":"c5ceff156609c384","203":"b7d302d3daa3ab99","256":"f9e19320d824f857","274":"c742e92f354469aa","305":"06c77d1ffd6ca30c","353":"e87fb3a8d3a2aa63","463":"20ec5e5225d56200","716":"214bfc51f3e14a36","947":"9c2cc4b24a8ea7b9"}[chunkId] + ".js";
 /******/ 	};
 /******/ })();
 /******/ 
@@ -5090,7 +5090,7 @@ if(!__webpack_require__.federation.instance){
 /******/ /* webpack/runtime/load script */
 /******/ (() => {
 /******/ 	var inProgress = {};
-/******/ 	var dataWebpackPrefix = "cart:";
+/******/ 	var dataWebpackPrefix = "shop:";
 /******/ 	// loadScript function to load a script via script tag
 /******/ 	__webpack_require__.l = (url, done, key, chunkId) => {
 /******/ 		if(inProgress[url]) { inProgress[url].push(done); return; }
@@ -5165,7 +5165,7 @@ if(!__webpack_require__.federation.instance){
 /******/ 		var warn = (msg) => {
 /******/ 			if (typeof console !== "undefined" && console.warn) console.warn(msg);
 /******/ 		};
-/******/ 		var uniqueName = "cart";
+/******/ 		var uniqueName = "shop";
 /******/ 		var register = (name, version, factory, eager) => {
 /******/ 			var versions = scope[name] = scope[name] || {};
 /******/ 			var activeVersion = versions[version];
@@ -5398,7 +5398,7 @@ if(!__webpack_require__.federation.instance){
 /******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 	// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 	var installedChunks = {
-/******/ 		949: 0
+/******/ 		883: 0
 /******/ 	};
 /******/ 	
 /******/ 	__webpack_require__.f.j = (chunkId, promises) => {
@@ -5475,7 +5475,7 @@ if(!__webpack_require__.federation.instance){
 /******/ 	
 /******/ 	}
 /******/ 	
-/******/ 	var chunkLoadingGlobal = self["webpackChunkcart"] = self["webpackChunkcart"] || [];
+/******/ 	var chunkLoadingGlobal = self["webpackChunkshop"] = self["webpackChunkshop"] || [];
 /******/ 	chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 	chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ })();
@@ -5485,7 +5485,7 @@ if(!__webpack_require__.federation.instance){
 /******/ // module cache are used so entry inlining is disabled
 /******/ // startup
 /******/ // Load entry module and return exports
-/******/ var __webpack_exports__ = __webpack_require__(3849);
+/******/ var __webpack_exports__ = __webpack_require__(6579);
 /******/ var __webpack_exports__get = __webpack_exports__.get;
 /******/ var __webpack_exports__init = __webpack_exports__.init;
 /******/ export { __webpack_exports__get as get, __webpack_exports__init as init };
