@@ -1418,7 +1418,7 @@ var helpers = {
 };
 function getBuilderId() {
   //@ts-ignore
-  return  true ? "cart:0.0.0" : 0;
+  return  true ? "shop:0.0.0" : 0;
 }
 
 // Function to match a remote with its name and expose
@@ -4766,7 +4766,7 @@ var runtimeCore = __webpack_require__(3464);
 // injected by bundler, so it can not use runtime-core stuff
 function getBuilderId() {
   //@ts-ignore
-  return  true ? "cart:0.0.0" : 0;
+  return  true ? "shop:0.0.0" : 0;
 }
 function getGlobalFederationInstance(name, version) {
   const buildId = getBuilderId();
@@ -4904,12 +4904,12 @@ exports.registerRemotes = registerRemotes;
 
 /***/ }),
 
-/***/ 7860:
+/***/ 7434:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 var moduleMap = {
 	"./Routes": () => {
-		return Promise.all(/* __federation_expose_Routes */[__webpack_require__.e(46), __webpack_require__.e(124), __webpack_require__.e(661), __webpack_require__.e(76)]).then(() => (() => ((__webpack_require__(4538)))));
+		return Promise.all(/* __federation_expose_Routes */[__webpack_require__.e(46), __webpack_require__.e(124), __webpack_require__.e(947), __webpack_require__.e(76)]).then(() => (() => ((__webpack_require__(4984)))));
 	}
 };
 var get = (module, getScope) => {
@@ -5018,7 +5018,7 @@ module.exports = _asyncToGenerator, module.exports.__esModule = true, module.exp
 /******/ (() => {
 /******/ 	if(!__webpack_require__.federation){
 /******/ 		__webpack_require__.federation = {
-/******/ 			initOptions: {"name":"cart","remotes":[],"shareStrategy":"version-first"},
+/******/ 			initOptions: {"name":"shop","remotes":[],"shareStrategy":"version-first"},
 /******/ 			chunkMatcher: function(chunkId) {return !/^(124|287|46)$/.test(chunkId)},
 /******/ 			rootOutputDir: "",
 /******/ 			initialConsumes: undefined,
@@ -5069,7 +5069,7 @@ module.exports = _asyncToGenerator, module.exports.__esModule = true, module.exp
 /******/ 	// This function allow to reference async chunks
 /******/ 	__webpack_require__.u = (chunkId) => {
 /******/ 		// return url for filenames based on template
-/******/ 		return "" + (chunkId === 76 ? "common" : chunkId) + "." + {"76":"2c8859d4335cf081","203":"ce6c762b28b4cc5f","256":"9b7b947b98374464","274":"d23f53670b3f831a","305":"e8dfa41ea6319b80","353":"43aa3bb2b7c91ad1","463":"2e52f2c98d68c817","661":"db43fedbd3006f4f","716":"5508c4fbd156a811"}[chunkId] + ".js";
+/******/ 		return "" + (chunkId === 76 ? "common" : chunkId) + "." + {"76":"c5ceff156609c384","203":"3e7e12c2e21189e4","256":"b7fb4189e820091d","274":"bbde17be55fff225","305":"2284631df947c43a","353":"e87fb3a8d3a2aa63","463":"20ec5e5225d56200","716":"913c82163edca169","947":"9c2cc4b24a8ea7b9"}[chunkId] + ".js";
 /******/ 	};
 /******/ })();
 /******/ 
@@ -5090,7 +5090,7 @@ module.exports = _asyncToGenerator, module.exports.__esModule = true, module.exp
 /******/ /* webpack/runtime/load script */
 /******/ (() => {
 /******/ 	var inProgress = {};
-/******/ 	var dataWebpackPrefix = "cart:";
+/******/ 	var dataWebpackPrefix = "shop:";
 /******/ 	// loadScript function to load a script via script tag
 /******/ 	__webpack_require__.l = (url, done, key, chunkId) => {
 /******/ 		if(inProgress[url]) { inProgress[url].push(done); return; }
@@ -5165,7 +5165,7 @@ module.exports = _asyncToGenerator, module.exports.__esModule = true, module.exp
 /******/ 		var warn = (msg) => {
 /******/ 			if (typeof console !== "undefined" && console.warn) console.warn(msg);
 /******/ 		};
-/******/ 		var uniqueName = "cart";
+/******/ 		var uniqueName = "shop";
 /******/ 		var register = (name, version, factory, eager) => {
 /******/ 			var versions = scope[name] = scope[name] || {};
 /******/ 			var activeVersion = versions[version];
@@ -5398,7 +5398,7 @@ module.exports = _asyncToGenerator, module.exports.__esModule = true, module.exp
 /******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 	// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 	var installedChunks = {
-/******/ 		949: 0
+/******/ 		883: 0
 /******/ 	};
 /******/ 	
 /******/ 	__webpack_require__.f.j = (chunkId, promises) => {
@@ -5475,7 +5475,7 @@ module.exports = _asyncToGenerator, module.exports.__esModule = true, module.exp
 /******/ 	
 /******/ 	}
 /******/ 	
-/******/ 	var chunkLoadingGlobal = self["webpackChunkcart"] = self["webpackChunkcart"] || [];
+/******/ 	var chunkLoadingGlobal = self["webpackChunkshop"] = self["webpackChunkshop"] || [];
 /******/ 	chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 	chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ })();
@@ -5485,7 +5485,7 @@ module.exports = _asyncToGenerator, module.exports.__esModule = true, module.exp
 /******/ // module cache are used so entry inlining is disabled
 /******/ // startup
 /******/ // Load entry module and return exports
-/******/ var __webpack_exports__ = __webpack_require__(7860);
+/******/ var __webpack_exports__ = __webpack_require__(7434);
 /******/ var __webpack_exports__get = __webpack_exports__.get;
 /******/ var __webpack_exports__init = __webpack_exports__.init;
 /******/ export { __webpack_exports__get as get, __webpack_exports__init as init };
