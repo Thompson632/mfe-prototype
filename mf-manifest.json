@@ -1,0 +1,271 @@
+{
+  "id": "host",
+  "name": "host",
+  "metaData": {
+    "name": "host",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.0.0",
+      "buildName": "@mfe-prototype/source"
+    },
+    "remoteEntry": {
+      "name": "",
+      "path": "",
+      "type": "module"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "host",
+    "pluginVersion": "0.9.1",
+    "prefetchInterface": false,
+    "publicPath": "auto"
+  },
+  "shared": [
+    {
+      "id": "host:@angular/common/http",
+      "name": "@angular/common/http",
+      "version": "19.2.8",
+      "singleton": true,
+      "requiredVersion": "^19.2.8",
+      "assets": {
+        "js": {
+          "async": [
+            "708.e0ceb06999141964.js"
+          ],
+          "sync": [
+            "polyfills.02ea0428d4c0d3a7.js",
+            "main.cbbc30512f221e9e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
+        }
+      }
+    },
+    {
+      "id": "host:@angular/common",
+      "name": "@angular/common",
+      "version": "19.2.8",
+      "singleton": true,
+      "requiredVersion": "^19.2.8",
+      "assets": {
+        "js": {
+          "async": [
+            "708.e0ceb06999141964.js"
+          ],
+          "sync": [
+            "polyfills.02ea0428d4c0d3a7.js",
+            "main.cbbc30512f221e9e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
+        }
+      }
+    },
+    {
+      "id": "host:@angular/core/primitives/di",
+      "name": "@angular/core/primitives/di",
+      "version": "19.2.8",
+      "singleton": true,
+      "requiredVersion": "~19.2.0",
+      "assets": {
+        "js": {
+          "async": [
+            "708.e0ceb06999141964.js"
+          ],
+          "sync": [
+            "polyfills.02ea0428d4c0d3a7.js",
+            "main.cbbc30512f221e9e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
+        }
+      }
+    },
+    {
+      "id": "host:@angular/core/primitives/signals",
+      "name": "@angular/core/primitives/signals",
+      "version": "19.2.8",
+      "singleton": true,
+      "requiredVersion": "^19.2.8",
+      "assets": {
+        "js": {
+          "async": [
+            "708.e0ceb06999141964.js"
+          ],
+          "sync": [
+            "polyfills.02ea0428d4c0d3a7.js",
+            "main.cbbc30512f221e9e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
+        }
+      }
+    },
+    {
+      "id": "host:@angular/core",
+      "name": "@angular/core",
+      "version": "19.2.8",
+      "singleton": true,
+      "requiredVersion": "^19.2.8",
+      "assets": {
+        "js": {
+          "async": [
+            "708.e0ceb06999141964.js"
+          ],
+          "sync": [
+            "polyfills.02ea0428d4c0d3a7.js",
+            "main.cbbc30512f221e9e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
+        }
+      }
+    },
+    {
+      "id": "host:@angular/platform-browser",
+      "name": "@angular/platform-browser",
+      "version": "19.2.8",
+      "singleton": true,
+      "requiredVersion": "^19.2.8",
+      "assets": {
+        "js": {
+          "async": [
+            "708.e0ceb06999141964.js"
+          ],
+          "sync": [
+            "polyfills.02ea0428d4c0d3a7.js",
+            "main.cbbc30512f221e9e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
+        }
+      }
+    },
+    {
+      "id": "host:@angular/router",
+      "name": "@angular/router",
+      "version": "19.2.8",
+      "singleton": true,
+      "requiredVersion": "^19.2.8",
+      "assets": {
+        "js": {
+          "async": [
+            "708.e0ceb06999141964.js"
+          ],
+          "sync": [
+            "polyfills.02ea0428d4c0d3a7.js",
+            "main.cbbc30512f221e9e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
+        }
+      }
+    },
+    {
+      "id": "host:@mfe-prototype/shared-services",
+      "name": "@mfe-prototype/shared-services",
+      "version": "0.0.0",
+      "singleton": true,
+      "requiredVersion": "^undefined",
+      "assets": {
+        "js": {
+          "async": [
+            "708.e0ceb06999141964.js"
+          ],
+          "sync": [
+            "polyfills.02ea0428d4c0d3a7.js",
+            "main.cbbc30512f221e9e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
+        }
+      }
+    },
+    {
+      "id": "host:rxjs/operators",
+      "name": "rxjs/operators",
+      "version": "7.8.2",
+      "singleton": true,
+      "requiredVersion": "^7.8.2",
+      "assets": {
+        "js": {
+          "async": [
+            "708.e0ceb06999141964.js"
+          ],
+          "sync": [
+            "polyfills.02ea0428d4c0d3a7.js",
+            "main.cbbc30512f221e9e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
+        }
+      }
+    },
+    {
+      "id": "host:rxjs",
+      "name": "rxjs",
+      "version": "7.8.2",
+      "singleton": true,
+      "requiredVersion": "^7.8.2",
+      "assets": {
+        "js": {
+          "async": [
+            "708.e0ceb06999141964.js"
+          ],
+          "sync": [
+            "polyfills.02ea0428d4c0d3a7.js",
+            "main.cbbc30512f221e9e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
+        }
+      }
+    }
+  ],
+  "remotes": [],
+  "exposes": []
+}

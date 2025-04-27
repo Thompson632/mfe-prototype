@@ -1,0 +1,311 @@
+{
+  "id": "host",
+  "name": "host",
+  "metaData": {
+    "name": "host",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.0.0",
+      "buildName": "@mfe-prototype/source"
+    },
+    "remoteEntry": {
+      "name": "",
+      "path": "",
+      "type": "module"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "host",
+    "pluginVersion": "0.9.1",
+    "prefetchInterface": false,
+    "publicPath": "auto"
+  },
+  "shared": [
+    {
+      "singleton": true,
+      "requiredVersion": "^19.2.8",
+      "shareScope": "default",
+      "strictVersion": true,
+      "eager": true,
+      "name": "@angular/common/http",
+      "version": "19.2.8",
+      "id": "host:@angular/common/http",
+      "assets": {
+        "js": {
+          "async": [
+            "708.e0ceb06999141964.js"
+          ],
+          "sync": [
+            "polyfills.02ea0428d4c0d3a7.js",
+            "main.cbbc30512f221e9e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^19.2.8",
+      "shareScope": "default",
+      "strictVersion": true,
+      "eager": true,
+      "name": "@angular/common",
+      "version": "19.2.8",
+      "id": "host:@angular/common",
+      "assets": {
+        "js": {
+          "async": [
+            "708.e0ceb06999141964.js"
+          ],
+          "sync": [
+            "polyfills.02ea0428d4c0d3a7.js",
+            "main.cbbc30512f221e9e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "~19.2.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/core/primitives/di",
+      "version": "19.2.8",
+      "eager": false,
+      "id": "host:@angular/core/primitives/di",
+      "assets": {
+        "js": {
+          "async": [
+            "708.e0ceb06999141964.js"
+          ],
+          "sync": [
+            "polyfills.02ea0428d4c0d3a7.js",
+            "main.cbbc30512f221e9e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^19.2.8",
+      "shareScope": "default",
+      "strictVersion": true,
+      "eager": true,
+      "name": "@angular/core/primitives/signals",
+      "version": "19.2.8",
+      "id": "host:@angular/core/primitives/signals",
+      "assets": {
+        "js": {
+          "async": [
+            "708.e0ceb06999141964.js"
+          ],
+          "sync": [
+            "polyfills.02ea0428d4c0d3a7.js",
+            "main.cbbc30512f221e9e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^19.2.8",
+      "shareScope": "default",
+      "strictVersion": true,
+      "eager": true,
+      "name": "@angular/core",
+      "version": "19.2.8",
+      "id": "host:@angular/core",
+      "assets": {
+        "js": {
+          "async": [
+            "708.e0ceb06999141964.js"
+          ],
+          "sync": [
+            "polyfills.02ea0428d4c0d3a7.js",
+            "main.cbbc30512f221e9e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^19.2.8",
+      "shareScope": "default",
+      "strictVersion": true,
+      "eager": true,
+      "name": "@angular/platform-browser",
+      "version": "19.2.8",
+      "id": "host:@angular/platform-browser",
+      "assets": {
+        "js": {
+          "async": [
+            "708.e0ceb06999141964.js"
+          ],
+          "sync": [
+            "polyfills.02ea0428d4c0d3a7.js",
+            "main.cbbc30512f221e9e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^19.2.8",
+      "shareScope": "default",
+      "strictVersion": true,
+      "eager": true,
+      "name": "@angular/router",
+      "version": "19.2.8",
+      "id": "host:@angular/router",
+      "assets": {
+        "js": {
+          "async": [
+            "708.e0ceb06999141964.js"
+          ],
+          "sync": [
+            "polyfills.02ea0428d4c0d3a7.js",
+            "main.cbbc30512f221e9e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^undefined",
+      "shareScope": "default",
+      "strictVersion": false,
+      "eager": true,
+      "name": "@mfe-prototype/shared-services",
+      "version": "0.0.0",
+      "id": "host:@mfe-prototype/shared-services",
+      "assets": {
+        "js": {
+          "async": [
+            "708.e0ceb06999141964.js"
+          ],
+          "sync": [
+            "polyfills.02ea0428d4c0d3a7.js",
+            "main.cbbc30512f221e9e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^7.8.2",
+      "shareScope": "default",
+      "strictVersion": true,
+      "eager": true,
+      "name": "rxjs/operators",
+      "version": "7.8.2",
+      "id": "host:rxjs/operators",
+      "assets": {
+        "js": {
+          "async": [
+            "708.e0ceb06999141964.js"
+          ],
+          "sync": [
+            "polyfills.02ea0428d4c0d3a7.js",
+            "main.cbbc30512f221e9e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^7.8.2",
+      "shareScope": "default",
+      "strictVersion": true,
+      "eager": true,
+      "name": "rxjs",
+      "version": "7.8.2",
+      "id": "host:rxjs",
+      "assets": {
+        "js": {
+          "async": [
+            "708.e0ceb06999141964.js"
+          ],
+          "sync": [
+            "polyfills.02ea0428d4c0d3a7.js",
+            "main.cbbc30512f221e9e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
+        }
+      },
+      "usedIn": []
+    }
+  ],
+  "remotes": [],
+  "exposes": []
+}
