@@ -1,8 +1,8 @@
 {
-  "id": "dashboard",
-  "name": "dashboard",
+  "id": "cart",
+  "name": "cart",
   "metaData": {
-    "name": "dashboard",
+    "name": "cart",
     "type": "app",
     "buildInfo": {
       "buildVersion": "0.0.0",
@@ -19,66 +19,60 @@
       "zip": "",
       "api": ""
     },
-    "globalName": "dashboard",
+    "globalName": "cart",
     "pluginVersion": "0.9.1",
     "prefetchInterface": false,
     "publicPath": "auto"
   },
   "shared": [
     {
-      "id": "dashboard:@angular/common/http",
+      "id": "cart:@angular/common/http",
       "name": "@angular/common/http",
       "version": "19.2.8",
       "singleton": true,
-      "requiredVersion": "^19.2.8",
+      "requiredVersion": "~19.2.0",
       "assets": {
         "js": {
           "async": [
-            "801.aa24b14742d9d1dd.js",
-            "common.fad1ca2ceaa9424f.js"
+            "353.43aa3bb2b7c91ad1.js",
+            "common.2c8859d4335cf081.js",
+            "716.5508c4fbd156a811.js"
           ],
           "sync": [
-            "polyfills.4f938a14cca0a76a.js",
-            "main.d4fdd40de6131c1c.js",
-            "remoteEntry.mjs"
+            "305.e8dfa41ea6319b80.js"
           ]
         },
         "css": {
           "async": [],
-          "sync": [
-            "styles.ef46db3751d8e999.css"
-          ]
+          "sync": []
         }
       }
     },
     {
-      "id": "dashboard:@angular/common",
+      "id": "cart:@angular/common",
       "name": "@angular/common",
       "version": "19.2.8",
       "singleton": true,
-      "requiredVersion": "^19.2.8",
+      "requiredVersion": "~19.2.0",
       "assets": {
         "js": {
           "async": [
-            "801.aa24b14742d9d1dd.js",
-            "common.fad1ca2ceaa9424f.js"
+            "353.43aa3bb2b7c91ad1.js",
+            "common.2c8859d4335cf081.js",
+            "716.5508c4fbd156a811.js"
           ],
           "sync": [
-            "polyfills.4f938a14cca0a76a.js",
-            "main.d4fdd40de6131c1c.js",
-            "remoteEntry.mjs"
+            "274.d23f53670b3f831a.js"
           ]
         },
         "css": {
           "async": [],
-          "sync": [
-            "styles.ef46db3751d8e999.css"
-          ]
+          "sync": []
         }
       }
     },
     {
-      "id": "dashboard:@angular/core/primitives/di",
+      "id": "cart:@angular/core/primitives/di",
       "name": "@angular/core/primitives/di",
       "version": "19.2.8",
       "singleton": true,
@@ -86,202 +80,111 @@
       "assets": {
         "js": {
           "async": [
-            "801.aa24b14742d9d1dd.js",
-            "common.fad1ca2ceaa9424f.js"
+            "274.d23f53670b3f831a.js",
+            "353.43aa3bb2b7c91ad1.js",
+            "716.5508c4fbd156a811.js"
           ],
           "sync": [
-            "polyfills.4f938a14cca0a76a.js",
-            "main.d4fdd40de6131c1c.js",
-            "remoteEntry.mjs"
+            "common.2c8859d4335cf081.js"
           ]
         },
         "css": {
           "async": [],
-          "sync": [
-            "styles.ef46db3751d8e999.css"
-          ]
+          "sync": []
         }
       }
     },
     {
-      "id": "dashboard:@angular/core/primitives/signals",
+      "id": "cart:@angular/core/primitives/signals",
       "name": "@angular/core/primitives/signals",
       "version": "19.2.8",
       "singleton": true,
-      "requiredVersion": "^19.2.8",
+      "requiredVersion": "~19.2.0",
       "assets": {
         "js": {
           "async": [
-            "801.aa24b14742d9d1dd.js",
-            "common.fad1ca2ceaa9424f.js"
+            "274.d23f53670b3f831a.js",
+            "353.43aa3bb2b7c91ad1.js",
+            "716.5508c4fbd156a811.js"
           ],
           "sync": [
-            "polyfills.4f938a14cca0a76a.js",
-            "main.d4fdd40de6131c1c.js",
-            "remoteEntry.mjs"
+            "common.2c8859d4335cf081.js"
           ]
         },
         "css": {
           "async": [],
-          "sync": [
-            "styles.ef46db3751d8e999.css"
-          ]
+          "sync": []
         }
       }
     },
     {
-      "id": "dashboard:@angular/core",
+      "id": "cart:@angular/core",
       "name": "@angular/core",
       "version": "19.2.8",
       "singleton": true,
-      "requiredVersion": "^19.2.8",
+      "requiredVersion": "~19.2.0",
       "assets": {
         "js": {
-          "async": [
-            "801.aa24b14742d9d1dd.js",
-            "common.fad1ca2ceaa9424f.js"
-          ],
+          "async": [],
           "sync": [
-            "polyfills.4f938a14cca0a76a.js",
-            "main.d4fdd40de6131c1c.js",
-            "remoteEntry.mjs"
+            "716.5508c4fbd156a811.js"
           ]
         },
         "css": {
           "async": [],
-          "sync": [
-            "styles.ef46db3751d8e999.css"
-          ]
+          "sync": []
         }
       }
     },
     {
-      "id": "dashboard:@angular/platform-browser",
+      "id": "cart:@angular/platform-browser",
       "name": "@angular/platform-browser",
       "version": "19.2.8",
       "singleton": true,
-      "requiredVersion": "^19.2.8",
+      "requiredVersion": "~19.2.0",
       "assets": {
         "js": {
           "async": [
-            "801.aa24b14742d9d1dd.js",
-            "common.fad1ca2ceaa9424f.js"
+            "274.d23f53670b3f831a.js",
+            "353.43aa3bb2b7c91ad1.js",
+            "common.2c8859d4335cf081.js",
+            "716.5508c4fbd156a811.js",
+            "203.ce6c762b28b4cc5f.js",
+            "305.e8dfa41ea6319b80.js"
           ],
           "sync": [
-            "polyfills.4f938a14cca0a76a.js",
-            "main.d4fdd40de6131c1c.js",
-            "remoteEntry.mjs"
+            "463.2e52f2c98d68c817.js"
           ]
         },
         "css": {
           "async": [],
-          "sync": [
-            "styles.ef46db3751d8e999.css"
-          ]
+          "sync": []
         }
       }
     },
     {
-      "id": "dashboard:@angular/router",
+      "id": "cart:@angular/router",
       "name": "@angular/router",
       "version": "19.2.8",
       "singleton": true,
-      "requiredVersion": "^19.2.8",
+      "requiredVersion": "~19.2.0",
       "assets": {
         "js": {
           "async": [
-            "801.aa24b14742d9d1dd.js",
-            "common.fad1ca2ceaa9424f.js"
+            "274.d23f53670b3f831a.js",
+            "353.43aa3bb2b7c91ad1.js",
+            "common.2c8859d4335cf081.js",
+            "716.5508c4fbd156a811.js",
+            "463.2e52f2c98d68c817.js",
+            "305.e8dfa41ea6319b80.js"
           ],
           "sync": [
-            "polyfills.4f938a14cca0a76a.js",
-            "main.d4fdd40de6131c1c.js",
-            "remoteEntry.mjs"
+            "256.9b7b947b98374464.js"
           ]
         },
         "css": {
           "async": [],
-          "sync": [
-            "styles.ef46db3751d8e999.css"
-          ]
-        }
-      }
-    },
-    {
-      "id": "dashboard:@mfe-prototype/shared-services",
-      "name": "@mfe-prototype/shared-services",
-      "version": "0.0.0",
-      "singleton": true,
-      "requiredVersion": "^undefined",
-      "assets": {
-        "js": {
-          "async": [
-            "801.aa24b14742d9d1dd.js",
-            "common.fad1ca2ceaa9424f.js"
-          ],
-          "sync": [
-            "polyfills.4f938a14cca0a76a.js",
-            "main.d4fdd40de6131c1c.js",
-            "remoteEntry.mjs"
-          ]
-        },
-        "css": {
-          "async": [],
-          "sync": [
-            "styles.ef46db3751d8e999.css"
-          ]
-        }
-      }
-    },
-    {
-      "id": "dashboard:rxjs/operators",
-      "name": "rxjs/operators",
-      "version": "7.8.1",
-      "singleton": true,
-      "requiredVersion": "^7.8.1",
-      "assets": {
-        "js": {
-          "async": [
-            "801.aa24b14742d9d1dd.js",
-            "common.fad1ca2ceaa9424f.js"
-          ],
-          "sync": [
-            "polyfills.4f938a14cca0a76a.js",
-            "main.d4fdd40de6131c1c.js",
-            "remoteEntry.mjs"
-          ]
-        },
-        "css": {
-          "async": [],
-          "sync": [
-            "styles.ef46db3751d8e999.css"
-          ]
-        }
-      }
-    },
-    {
-      "id": "dashboard:rxjs",
-      "name": "rxjs",
-      "version": "7.8.1",
-      "singleton": true,
-      "requiredVersion": "^7.8.1",
-      "assets": {
-        "js": {
-          "async": [
-            "801.aa24b14742d9d1dd.js",
-            "common.fad1ca2ceaa9424f.js"
-          ],
-          "sync": [
-            "polyfills.4f938a14cca0a76a.js",
-            "main.d4fdd40de6131c1c.js",
-            "remoteEntry.mjs"
-          ]
-        },
-        "css": {
-          "async": [],
-          "sync": [
-            "styles.ef46db3751d8e999.css"
-          ]
+          "sync": []
         }
       }
     }
@@ -289,7 +192,7 @@
   "remotes": [],
   "exposes": [
     {
-      "id": "dashboard:Routes",
+      "id": "cart:Routes",
       "name": "Routes",
       "assets": {
         "js": {
