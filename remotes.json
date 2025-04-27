@@ -1,0 +1,30 @@
+[
+  {
+    "name": "dashboard",
+    "remoteEntry": "http://localhost:4201/mf-manifest.json",
+    "exposedModule": "./Routes",
+    "routePath": "dashboard",
+    "healthUrl": "http://localhost:3001/api/health"
+  },
+  {
+    "name": "cart",
+    "remoteEntry": "http://localhost:4202/mf-manifest.json",
+    "exposedModule": "./Routes",
+    "routePath": "cart",
+    "healthUrl": "http://localhost:3002/api/health"
+  },
+  {
+    "name": "shop",
+    "remoteEntry": "http://localhost:4203/mf-manifest.json",
+    "exposedModule": "./Routes",
+    "routePath": "shop",
+    "healthUrl": "http://localhost:3003/api/health"
+  },
+  {
+    "name": "about",
+    "remoteEntry": "http://localhost:4204/mf-manifest.json",
+    "exposedModule": "./Routes",
+    "routePath": "about",
+    "healthUrl": "http://localhost:3004/api/health"
+  }
+]

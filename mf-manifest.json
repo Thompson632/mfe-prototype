@@ -1,15 +1,15 @@
 {
-  "id": "about",
-  "name": "about",
+  "id": "host",
+  "name": "host",
   "metaData": {
-    "name": "about",
+    "name": "host",
     "type": "app",
     "buildInfo": {
       "buildVersion": "0.0.0",
       "buildName": "@mfe-prototype/source"
     },
     "remoteEntry": {
-      "name": "remoteEntry.mjs",
+      "name": "",
       "path": "",
       "type": "module"
     },
@@ -19,60 +19,62 @@
       "zip": "",
       "api": ""
     },
-    "globalName": "about",
+    "globalName": "host",
     "pluginVersion": "0.9.1",
     "prefetchInterface": false,
     "publicPath": "auto"
   },
   "shared": [
     {
-      "id": "about:@angular/common/http",
+      "id": "host:@angular/common/http",
       "name": "@angular/common/http",
       "version": "19.2.8",
       "singleton": true,
-      "requiredVersion": "~19.2.0",
+      "requiredVersion": "^19.2.8",
       "assets": {
         "js": {
           "async": [
-            "353.190478547399b496.js",
-            "common.eecefdf1ae8b2141.js",
-            "716.1b6cd4cc1516aab4.js"
+            "708.e0ceb06999141964.js"
           ],
           "sync": [
-            "305.3e1b85e872d17b98.js"
+            "polyfills.1aaed78041e24892.js",
+            "main.310fbd1802c11f77.js"
           ]
         },
         "css": {
           "async": [],
-          "sync": []
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
         }
       }
     },
     {
-      "id": "about:@angular/common",
+      "id": "host:@angular/common",
       "name": "@angular/common",
       "version": "19.2.8",
       "singleton": true,
-      "requiredVersion": "~19.2.0",
+      "requiredVersion": "^19.2.8",
       "assets": {
         "js": {
           "async": [
-            "353.190478547399b496.js",
-            "common.eecefdf1ae8b2141.js",
-            "716.1b6cd4cc1516aab4.js"
+            "708.e0ceb06999141964.js"
           ],
           "sync": [
-            "274.ad1dd2b35297bfde.js"
+            "polyfills.1aaed78041e24892.js",
+            "main.310fbd1802c11f77.js"
           ]
         },
         "css": {
           "async": [],
-          "sync": []
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
         }
       }
     },
     {
-      "id": "about:@angular/core/primitives/di",
+      "id": "host:@angular/core/primitives/di",
       "name": "@angular/core/primitives/di",
       "version": "19.2.8",
       "singleton": true,
@@ -80,131 +82,190 @@
       "assets": {
         "js": {
           "async": [
-            "274.ad1dd2b35297bfde.js",
-            "353.190478547399b496.js",
-            "716.1b6cd4cc1516aab4.js"
+            "708.e0ceb06999141964.js"
           ],
           "sync": [
-            "common.eecefdf1ae8b2141.js"
+            "polyfills.1aaed78041e24892.js",
+            "main.310fbd1802c11f77.js"
           ]
         },
         "css": {
           "async": [],
-          "sync": []
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
         }
       }
     },
     {
-      "id": "about:@angular/core/primitives/signals",
+      "id": "host:@angular/core/primitives/signals",
       "name": "@angular/core/primitives/signals",
       "version": "19.2.8",
       "singleton": true,
-      "requiredVersion": "~19.2.0",
+      "requiredVersion": "^19.2.8",
       "assets": {
         "js": {
           "async": [
-            "274.ad1dd2b35297bfde.js",
-            "353.190478547399b496.js",
-            "716.1b6cd4cc1516aab4.js"
+            "708.e0ceb06999141964.js"
           ],
           "sync": [
-            "common.eecefdf1ae8b2141.js"
+            "polyfills.1aaed78041e24892.js",
+            "main.310fbd1802c11f77.js"
           ]
         },
         "css": {
           "async": [],
-          "sync": []
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
         }
       }
     },
     {
-      "id": "about:@angular/core",
+      "id": "host:@angular/core",
       "name": "@angular/core",
       "version": "19.2.8",
       "singleton": true,
-      "requiredVersion": "~19.2.0",
+      "requiredVersion": "^19.2.8",
       "assets": {
         "js": {
-          "async": [],
+          "async": [
+            "708.e0ceb06999141964.js"
+          ],
           "sync": [
-            "716.1b6cd4cc1516aab4.js"
+            "polyfills.1aaed78041e24892.js",
+            "main.310fbd1802c11f77.js"
           ]
         },
         "css": {
           "async": [],
-          "sync": []
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
         }
       }
     },
     {
-      "id": "about:@angular/platform-browser",
+      "id": "host:@angular/platform-browser",
       "name": "@angular/platform-browser",
       "version": "19.2.8",
       "singleton": true,
-      "requiredVersion": "~19.2.0",
+      "requiredVersion": "^19.2.8",
       "assets": {
         "js": {
           "async": [
-            "274.ad1dd2b35297bfde.js",
-            "353.190478547399b496.js",
-            "common.eecefdf1ae8b2141.js",
-            "716.1b6cd4cc1516aab4.js",
-            "203.8b13eaecb11c9360.js",
-            "305.3e1b85e872d17b98.js"
+            "708.e0ceb06999141964.js"
           ],
           "sync": [
-            "463.4200e1c8d5f2bd5b.js"
+            "polyfills.1aaed78041e24892.js",
+            "main.310fbd1802c11f77.js"
           ]
         },
         "css": {
           "async": [],
-          "sync": []
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
         }
       }
     },
     {
-      "id": "about:@angular/router",
+      "id": "host:@angular/router",
       "name": "@angular/router",
       "version": "19.2.8",
       "singleton": true,
-      "requiredVersion": "~19.2.0",
+      "requiredVersion": "^19.2.8",
       "assets": {
         "js": {
           "async": [
-            "274.ad1dd2b35297bfde.js",
-            "353.190478547399b496.js",
-            "common.eecefdf1ae8b2141.js",
-            "716.1b6cd4cc1516aab4.js",
-            "463.4200e1c8d5f2bd5b.js",
-            "305.3e1b85e872d17b98.js"
+            "708.e0ceb06999141964.js"
           ],
           "sync": [
-            "256.3e0bc1e70748a9c8.js"
+            "polyfills.1aaed78041e24892.js",
+            "main.310fbd1802c11f77.js"
           ]
         },
         "css": {
           "async": [],
-          "sync": []
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
+        }
+      }
+    },
+    {
+      "id": "host:@mfe-prototype/shared-services",
+      "name": "@mfe-prototype/shared-services",
+      "version": "0.0.0",
+      "singleton": true,
+      "requiredVersion": "^undefined",
+      "assets": {
+        "js": {
+          "async": [
+            "708.e0ceb06999141964.js"
+          ],
+          "sync": [
+            "polyfills.1aaed78041e24892.js",
+            "main.310fbd1802c11f77.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
+        }
+      }
+    },
+    {
+      "id": "host:rxjs/operators",
+      "name": "rxjs/operators",
+      "version": "7.8.1",
+      "singleton": true,
+      "requiredVersion": "^7.8.1",
+      "assets": {
+        "js": {
+          "async": [
+            "708.e0ceb06999141964.js"
+          ],
+          "sync": [
+            "polyfills.1aaed78041e24892.js",
+            "main.310fbd1802c11f77.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
+        }
+      }
+    },
+    {
+      "id": "host:rxjs",
+      "name": "rxjs",
+      "version": "7.8.1",
+      "singleton": true,
+      "requiredVersion": "^7.8.1",
+      "assets": {
+        "js": {
+          "async": [
+            "708.e0ceb06999141964.js"
+          ],
+          "sync": [
+            "polyfills.1aaed78041e24892.js",
+            "main.310fbd1802c11f77.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": [
+            "styles.ef46db3751d8e999.css"
+          ]
         }
       }
     }
   ],
   "remotes": [],
-  "exposes": [
-    {
-      "id": "about:Routes",
-      "name": "Routes",
-      "assets": {
-        "js": {
-          "async": [],
-          "sync": []
-        },
-        "css": {
-          "async": [],
-          "sync": []
-        }
-      },
-      "path": "./Routes"
-    }
-  ]
+  "exposes": []
 }
