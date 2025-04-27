@@ -10,6 +10,8 @@ const config: ModuleFederationConfig = {
     ['@angular/platform-browser', { singleton: true, strictVersion: true, eager: true }],
     ['@angular/core/primitives/signals', { singleton: true, strictVersion: true, eager: true }],
     ["@angular/common/http", { singleton: true, strictVersion: true, eager: true }],
+    ["rxjs", { singleton: true, strictVersion: true, eager: true }],
+    ["rxjs/operators", { singleton: true, strictVersion: true, eager: true }],
     ['@mfe-prototype/shared-services', { singleton: true, strictVersion: false, eager: true }], 
   ]
 };

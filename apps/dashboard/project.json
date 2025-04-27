@@ -31,7 +31,8 @@
         "scripts": [],
         "customWebpackConfig": {
           "path": "apps/dashboard/webpack.config.ts"
-        }
+        },
+        "allowedCommonJsDependencies": ["lodash"]
       },
       "configurations": {
         "production": {

@@ -1,19 +1,19 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { RemoteStatus } from './remote-status.model';
-import { RemoteApp } from './remote-app.model'; // <- assume you have this
+import { RemoteApp } from './remote-app.model';
+import { firstValueFrom } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RemoteStatusService {
   remoteStatuses: RemoteStatus[] = [];
-
-  constructor(private http: HttpClient) {}
+  private readonly httpClient = inject(HttpClient);
 
   async checkStatuses(remotes: RemoteApp[]): Promise<void> {
     const checks = remotes.map(async (remote) => {
-      const healthUrl = remote.healthUrl; // 🔥 Use provided healthUrl
+      const healthUrl = remote.healthUrl;
 
       if (!healthUrl) {
         console.warn(`Remote [${remote.name}] missing healthUrl.`);
@@ -22,8 +22,8 @@ export class RemoteStatusService {
       }
 
       try {
-        const res = await this.http.get<any>(healthUrl).toPromise(); // Expecting JSON response
-        const healthy = res?.status === 'ok'; // 🔥 Based on JSON field
+        const res = await firstValueFrom(this.httpClient.get<any>(healthUrl));
+        const healthy = res?.status === 'ok';
 
         this.updateStatus(remote.name, remote.routePath, healthUrl, healthy, res);
       } catch (error) {
