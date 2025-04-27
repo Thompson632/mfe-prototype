@@ -20,7 +20,8 @@
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/about/public"
+            "input": "apps/about/public",
+            "output": "/"
           }
         ],
         "styles": ["apps/about/src/styles.scss"],

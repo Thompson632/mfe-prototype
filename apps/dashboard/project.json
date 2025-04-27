@@ -54,13 +54,13 @@
           "customWebpackConfig": {
             "path": "apps/dashboard/webpack.prod.config.ts"
           },
-          "baseHref": "/mfe-prototype/dashboard/",
           "fileReplacements": [
             {
-              "replace": "apps/dashboard/public/remotes.json",
-              "with": "apps/dashboard/public/remotes.prod.json"
+              "replace": "apps/dashboard/src/environments/environment.ts",
+              "with": "apps/dashboard/src/environments/environment.prod.ts"
             }
-          ]
+          ],
+          "baseHref": "/mfe-prototype/dashboard/"
         },
         "development": {
           "buildOptimizer": false,

@@ -20,7 +20,8 @@
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/cart/public"
+            "input": "apps/cart/public",
+            "output": "/"
           }
         ],
         "styles": ["apps/cart/src/styles.scss"],

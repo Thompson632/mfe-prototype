@@ -17,20 +17,48 @@ jobs:
         with:
           node-version: 20
 
+      - name: Cache node_modules
+        uses: actions/cache@v4
+        with:
+          path: |
+            node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            node-modules-
+
       - name: Install dependencies
         run: npm install
 
+      - name: Cache Nx output 
+        uses: actions/cache@v4
+        with:
+          path: |
+            .nx/cache
+          key: nx-cache-${{ github.ref }}-${{ github.sha }}
+          restore-keys: |
+            nx-cache-${{ github.ref }}-
+            nx-cache-
+
+      - name: Install latest Nx globally
+        run: npm install -g nx@latest
+
       - name: Format Check
-        run: npx nx format:check
+        run: npm run format
 
       - name: Lint All
-        run: npx nx run-many --target=lint --all
+        run: npm run lint
 
       - name: Build All Apps
         run: npm run build
 
       - name: Test All
-        run: npx nx run-many --target=test --all
+        run: npm run test
+
+      - name: Upload dist folder
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
 
   deploy:
     needs: build-test
@@ -44,8 +72,32 @@ jobs:
         with:
           node-version: 20
 
+      - name: Cache node_modules
+        uses: actions/cache@v4
+        with:
+          path: |
+            node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            node-modules-
+
       - name: Install dependencies
         run: npm install
 
-      - name: Deploy Host to GitHub Pages
+      - name: Install latest Nx globally
+        run: npm install -g nx@latest
+
+      - name: Cache Nx output
+        uses: actions/cache@v4
+        with:
+          path: |
+            .nx/cache
+          key: nx-cache-${{ github.ref }}-${{ github.sha }}
+          restore-keys: |
+            nx-cache-${{ github.ref }}-
+            nx-cache-
+            
+      - name: Deploy All Apps
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run deploy

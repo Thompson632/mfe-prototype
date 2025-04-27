@@ -57,12 +57,8 @@
           },
           "fileReplacements": [
             {
-              "replace": "apps/host/public/module-federation.manifest.json",
-              "with": "apps/host/public/module-federation.manifest.prod.json"
-            },
-            {
-              "replace": "apps/host/public/remotes.json",
-              "with": "apps/host/public/remotes.prod.json"
+              "replace": "apps/host/src/environments/environment.ts",
+              "with": "apps/host/src/environments/environment.prod.ts"
             }
           ]
         },

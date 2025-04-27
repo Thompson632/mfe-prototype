@@ -1,18 +1,21 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable, InjectionToken } from '@angular/core';
 import { Router } from '@angular/router';
 import { init, loadRemote } from '@module-federation/enhanced/runtime';
 import { RemoteApp } from './remote-app.model';
+
+export const REMOTES_PATH = new InjectionToken<string>('REMOTES_PATH');
 
 @Injectable({
   providedIn: 'root'
 })
 export class RemoteRegistryService {
   public static readonly DEFAULT_LAYOUT = 'dashboard';
-  private static readonly REMOTES_JSON = 'remotes.json';
 
   private loadedRemotes = new Map<string, any>();
   private remotes: RemoteApp[] = [];
   private remotesLoaded = false;
+
+  constructor(@Inject(REMOTES_PATH) private readonly remotesPath: string) {}
 
   async initDefaultRoute(router: Router): Promise<void> {
     await this.ensureRemotesLoaded();
@@ -79,10 +82,10 @@ export class RemoteRegistryService {
     if (this.remotesLoaded) return;
 
     try {
-      const response = await fetch(RemoteRegistryService.REMOTES_JSON);
+      const response = await fetch(this.remotesPath);
       this.remotes = await response.json();
       this.remotesLoaded = true;
-      console.log('[RemoteRegistry] Successfully loaded remote list.');
+      console.log(`[RemoteRegistry] Successfully loaded remotes from: [${this.remotesPath}]`);
     } catch (error) {
       console.error('[RemoteRegistry] Failed to fetch remote list:', error);
       throw error;

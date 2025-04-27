@@ -2,7 +2,8 @@ import { ApplicationConfig, APP_INITIALIZER, inject, provideZoneChangeDetection 
 import { provideHttpClient } from '@angular/common/http';
 import { provideRouter, Router } from '@angular/router';
 import { appRoutes } from './app.routes';
-import { RemoteRegistryService } from '@mfe-prototype/shared-services';
+import { RemoteRegistryService, REMOTES_PATH } from '@mfe-prototype/shared-services'; // Import REMOTES_PATH token
+import { environment } from '../environments/environment';
 
 export function initDefaultRemote() {
   return () => {
@@ -17,6 +18,10 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideHttpClient(),
     provideRouter(appRoutes),
+    {
+      provide: REMOTES_PATH,
+      useValue: environment.remotesPath
+    },
     RemoteRegistryService,
     {
       provide: APP_INITIALIZER,

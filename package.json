@@ -10,12 +10,10 @@
     "test": "nx run-many --target=test --all",
     "lint": "nx run-many --target=lint --all",
     "format": "nx format:check",
-    "deploy:host": "npx ngh --dir=dist/apps/host --no-silent --name='CI' --email='robertdavidthompson632@gmail.com'",
-    "deploy:dashboard": "npx ngh --dir=dist/apps/dashboard --no-silent --name='CI' --email='robertdavidthompson632@gmail.com'",
-    "deploy:cart": "npx ngh --dir=dist/apps/cart --no-silent --name='CI' --email='robertdavidthompson632@gmail.com'",
-    "deploy:shop": "npx ngh --dir=dist/apps/shop --no-silent --name='CI' --email='robertdavidthompson632@gmail.com'",
-    "deploy:about": "npx ngh --dir=dist/apps/about --no-silent --name='CI' --email='robertdavidthompson632@gmail.com'",
-    "deploy": "npm run build && npm run deploy:host && npm run deploy:dashboard && npm run deploy:cart && npm run deploy:shop && npm run deploy:about"
+    "pre:copy": "bash copy-remotes.sh",
+    "pre:setup": "bash setup-deploy.sh",
+    "pre:deploy": "npm run build && npm run pre:copy && npm run pre:setup",
+    "deploy": "npm run pre:deploy && npx ngh --dir=dist/deploy --repo=https://x-access-token:${GITHUB_TOKEN}@github.com/Thompson632/mfe-prototype.git --no-silent --name='CI' --email='robertdavidthompson632@gmail.com'"
   },
   "private": true,
   "devDependencies": {
