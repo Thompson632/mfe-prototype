@@ -1,9 +1,8 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
-import { init, loadRemote } from '@module-federation/enhanced/runtime';
+import { RemoteRegistryService, RemoteStatusService, RemoteStatus } from '@mfe-prototype/shared-services';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { TopbarComponent } from '../topbar/topbar.component';
-import { RemoteApp } from '@mfe-prototype/shared-services';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -14,42 +13,36 @@ import { CommonModule } from '@angular/common';
   imports: [RouterModule, TopbarComponent, SidebarComponent, CommonModule]
 })
 export class DashboardComponent implements OnInit {
-  private static readonly DEFAULT_LAYOUT = 'dashboard';
-  private static readonly REMOTES_JSON = 'remotes.json';
   private static initialized = false;
 
   isLoading = true;
+  statuses: RemoteStatus[] = [];
 
   private readonly router = inject(Router);
+  private readonly remoteRegistryService = inject(RemoteRegistryService);
+  private readonly remoteStatusService = inject(RemoteStatusService);
 
   async ngOnInit() {
     if (DashboardComponent.initialized) {
-      console.log('[ Dashboard ] Already initialized, skipping init.');
       this.isLoading = false;
       return;
     }
 
-    console.log(`[ Dashboard ] Fetching dashboard [${DashboardComponent.REMOTES_JSON}]`);
-
     try {
-      const response = await fetch(DashboardComponent.REMOTES_JSON);
-      const remotes = (await response.json()) as RemoteApp[];
+      const remotes = await this.remoteRegistryService.getAllRegisteredRemotes();
+      await this.remoteStatusService.checkStatuses(remotes);
+      this.statuses = this.remoteStatusService.getStatuses();
 
-      const nonDefaultRemotes = remotes.filter(remote => remote.name !== DashboardComponent.DEFAULT_LAYOUT);
+      // Set up health status polling every 30 seconds
+      setInterval(async () => {
+        await this.remoteStatusService.checkStatuses(remotes);
+        this.statuses = this.remoteStatusService.getStatuses();
+      }, 30000);
 
-      const manifest = nonDefaultRemotes.map((remote: RemoteApp) => ({
-        name: remote.name,
-        entry: remote.remoteEntry
-      }));
-
-      await init({ name: 'dashboard', remotes: manifest });
-
-      const childRoutes = nonDefaultRemotes.map((remote: RemoteApp) => ({
-        path: remote.routePath,
-        loadChildren: () =>
-          loadRemote(`${remote.name}/${remote.exposedModule.replace('./', '')}`)
-            .then((m: any) => m.remoteRoutes)
-      }));
+      const childRoutes = await this.remoteRegistryService.initDefaultMfeRoutes(
+        RemoteRegistryService.DEFAULT_LAYOUT,
+        [RemoteRegistryService.DEFAULT_LAYOUT]
+      );
 
       this.router.resetConfig([
         ...this.router.config,
@@ -60,11 +53,9 @@ export class DashboardComponent implements OnInit {
         }
       ]);
 
-      console.log('[ Dashboard ] Routes registered:', JSON.stringify(childRoutes));
-
       DashboardComponent.initialized = true;
     } catch (error) {
-      console.error('[ Dashboard ] Failed to initialize:', error);
+      console.error('Failed to initialize dashboard:', error);
     } finally {
       this.isLoading = false;
     }

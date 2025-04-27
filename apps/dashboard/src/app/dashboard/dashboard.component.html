@@ -2,11 +2,28 @@
 
 <div class="layout">
   <app-sidebar />
+
   <main class="dashboard-main">
+    <section *ngIf="!isLoading" class="health-dashboard">
+      <h2>Micro Frontends Health Status</h2>
+      <ul>
+        <li *ngFor="let remote of statuses">
+          <span [style.color]="remote.status === 'healthy' ? 'green' : 'red'">
+            ●
+          </span>
+          {{ remote.name }} ({{ remote.status }})
+          <span *ngIf="remote.metadata?.version"> - v{{ remote.metadata.version }}</span>
+          <span *ngIf="remote.metadata?.uptimeSeconds"> - {{ remote.metadata.uptimeSeconds }}s up</span>
+        </li>
+      </ul>
+    </section>
+
+
     <div *ngIf="isLoading" class="loading-spinner">
       Loading dashboard modules...
     </div>
 
+    <!-- Child routes will render here -->
     <router-outlet *ngIf="!isLoading"></router-outlet>
   </main>
 </div>

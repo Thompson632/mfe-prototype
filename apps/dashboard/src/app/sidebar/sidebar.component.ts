@@ -3,7 +3,6 @@ import { Component, OnInit, inject } from '@angular/core';
 import { Router } from '@angular/router';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { RemoteApp, RemoteRegistryService } from '@mfe-prototype/shared-services';
-import { loadRemote } from '@module-federation/enhanced/runtime';
 
 @Component({
   selector: 'app-sidebar',
@@ -21,7 +20,8 @@ export class SidebarComponent implements OnInit {
   isLoading = false;
 
   async ngOnInit() {
-    this.remotes = await this.remoteRegistryService.fetchRemotes();
+    this.remotes = await this.remoteRegistryService.getAllRegisteredRemotes();
+    this.remotes = this.remotes.filter(remote => remote.name !== RemoteRegistryService.DEFAULT_LAYOUT);
 
     this.router.events.subscribe(() => {
       this.activeRoute = this.router.url.replace('/', '');
@@ -31,15 +31,24 @@ export class SidebarComponent implements OnInit {
   async navigateToRemote(remote: RemoteApp) {
     try {
       this.isLoading = true;
-      const routeId = `${remote.name}/${remote.exposedModule.replace('./', '')}`;
-      console.log("Trying to load", routeId)
-      // TODO: Add logic if it's already loaded, just return it
-      await loadRemote(routeId);
+      await this.remoteRegistryService.loadRemoteByName(remote.name);
       this.isLoading = false;
       this.router.navigateByUrl(`/${remote.routePath}`);
     } catch (_) {
       this.isLoading = false;
       alert(`Failed to load remote: ${remote.name}`);
+    }
+  }
+
+  async navigateToHealthDashboard() {
+    try {
+      this.isLoading = true;
+      await this.router.navigateByUrl('/health-dashboard');
+    } catch (error) {
+      console.error('Failed to navigate to Health Dashboard:', error);
+      alert('Failed to navigate to Health Dashboard.');
+    } finally {
+      this.isLoading = false;
     }
   }
 }

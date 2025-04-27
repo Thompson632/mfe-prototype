@@ -3,4 +3,5 @@ export interface RemoteStatus {
   routePath: string;
   healthUrl: string;
   status: 'healthy' | 'unavailable';
+  metadata?: any;
 }
