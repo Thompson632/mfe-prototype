@@ -1,1 +1,0 @@
-(self.webpackChunkshop=self.webpackChunkshop||[]).push([[273],{7273:(h,c,o)=>{var n=o(2287),e=o(7046),s=o(7424);const p=[{path:"",loadChildren:()=>o.e(76).then(o.bind(o,4984)).then(t=>t.remoteRoutes)}],a={providers:[(0,e.provideZoneChangeDetection)({eventCoalescing:!0}),(0,s.provideRouter)(p)]};var r=o(5947);(0,n.bootstrapApplication)(r.a,a).catch(t=>console.error(t))}}]);
