@@ -16,10 +16,12 @@
         "polyfills": ["zone.js"],
         "tsConfig": "apps/dashboard/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
+        "baseHref": "/",
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/dashboard/public"
+            "input": "apps/dashboard/public",
+            "output": "/"
           },
           {
             "glob": "**/*",
@@ -51,7 +53,14 @@
           "outputHashing": "all",
           "customWebpackConfig": {
             "path": "apps/dashboard/webpack.prod.config.ts"
-          }
+          },
+          "baseHref": "/mfe-prototype/dashboard/",
+          "fileReplacements": [
+            {
+              "replace": "apps/dashboard/public/remotes.json",
+              "with": "apps/dashboard/public/remotes.prod.json"
+            }
+          ]
         },
         "development": {
           "buildOptimizer": false,
@@ -59,7 +68,8 @@
           "vendorChunk": true,
           "extractLicenses": false,
           "sourceMap": true,
-          "namedChunks": true
+          "namedChunks": true,
+          "baseHref": "/"
         }
       },
       "defaultConfiguration": "production"

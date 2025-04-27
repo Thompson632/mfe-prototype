@@ -27,7 +27,7 @@ jobs:
         run: npx nx run-many --target=lint --all
 
       - name: Build All Apps
-        run: npx nx run-many --target=build --projects=host,dashboard,cart,shop,about --configuration=production
+        run: npm run build
 
       - name: Test All
         run: npx nx run-many --target=test --all
@@ -44,11 +44,8 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install
+      - name: Install dependencies
         run: npm install
 
-      - name: Build Host for Production
-        run: npx nx build host --configuration=production
-
-      - name: Deploy to GitHub Pages
-        run: npx gh-pages -d dist/apps/host
+      - name: Deploy Host to GitHub Pages
+        run: npm run deploy
