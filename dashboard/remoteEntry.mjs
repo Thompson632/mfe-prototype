@@ -362,7 +362,7 @@ function interval(period = 0, scheduler = _scheduler_async__WEBPACK_IMPORTED_MOD
 
 var moduleMap = {
 	"./Routes": () => {
-		return Promise.all(/* __federation_expose_Routes */[__webpack_require__.e(215), __webpack_require__.e(151), __webpack_require__.e(76)]).then(() => (() => ((__webpack_require__(5867)))));
+		return Promise.all(/* __federation_expose_Routes */[__webpack_require__.e(259), __webpack_require__.e(603), __webpack_require__.e(76)]).then(() => (() => ((__webpack_require__(5867)))));
 	}
 };
 var get = (module, getScope) => {
@@ -64711,32 +64711,33 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
+  REMOTES_PATH: () => (/* reexport */ REMOTES_PATH),
   RemoteRegistryService: () => (/* reexport */ RemoteRegistryService),
   RemoteStatusService: () => (/* reexport */ RemoteStatusService)
 });
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js
 var asyncToGenerator = __webpack_require__(467);
-// EXTERNAL MODULE: ./node_modules/@module-federation/enhanced/dist/src/runtime.js
-var runtime = __webpack_require__(5750);
 // EXTERNAL MODULE: consume shared module (default) @angular/core@!=1.9...2...0 (strict) (singleton) (fallback: ./node_modules/@angular/core/fesm2022/core.mjs) (eager)
 var core_mjs_eager_ = __webpack_require__(541);
+// EXTERNAL MODULE: ./node_modules/@module-federation/enhanced/dist/src/runtime.js
+var runtime = __webpack_require__(5750);
 ;// ./libs/shared-services/src/lib/remote-registry.service.ts
 
 
 
+
+const REMOTES_PATH = new core_mjs_eager_.InjectionToken('REMOTES_PATH');
 let RemoteRegistryService = /*#__PURE__*/(() => {
   class RemoteRegistryService {
-    constructor() {
-      this.loadedRemotes = new Map();
-      this.remotes = [];
-      this.remotesLoaded = false;
-    }
     static {
       this.DEFAULT_LAYOUT = 'dashboard';
     }
-    static {
-      this.REMOTES_JSON = 'remotes.json';
+    constructor(remotesPath) {
+      this.remotesPath = remotesPath;
+      this.loadedRemotes = new Map();
+      this.remotes = [];
+      this.remotesLoaded = false;
     }
     initDefaultRoute(router) {
       var _this = this;
@@ -64803,10 +64804,10 @@ let RemoteRegistryService = /*#__PURE__*/(() => {
       return (0,asyncToGenerator/* default */.A)(function* () {
         if (_this5.remotesLoaded) return;
         try {
-          const response = yield fetch(RemoteRegistryService.REMOTES_JSON);
+          const response = yield fetch(_this5.remotesPath);
           _this5.remotes = yield response.json();
           _this5.remotesLoaded = true;
-          console.log('[RemoteRegistry] Successfully loaded remote list.');
+          console.log(`[RemoteRegistry] Successfully loaded remotes from: [${_this5.remotesPath}]`);
         } catch (error) {
           console.error('[RemoteRegistry] Failed to fetch remote list:', error);
           throw error;
@@ -64837,7 +64838,7 @@ let RemoteRegistryService = /*#__PURE__*/(() => {
     }
     static {
       this.ɵfac = function RemoteRegistryService_Factory(__ngFactoryType__) {
-        return new (__ngFactoryType__ || RemoteRegistryService)();
+        return new (__ngFactoryType__ || RemoteRegistryService)(core_mjs_eager_["ɵɵinject"](REMOTES_PATH));
       };
     }
     static {
@@ -77773,8 +77774,8 @@ function operate(init) {
 /******/ 			},
 /******/ 			shareKey: "rxjs",
 /******/ 		},
-/******/ 		7603: {
-/******/ 			getter: () => (() => (__webpack_require__(2274))),
+/******/ 		4151: {
+/******/ 			getter: () => (() => (__webpack_require__(7097))),
 /******/ 			shareInfo: {
 /******/ 				shareConfig: {
 /******/ 				  "fixedDependencies": false,
@@ -77785,7 +77786,7 @@ function operate(init) {
 /******/ 				},
 /******/ 				scope: ["default"],
 /******/ 			},
-/******/ 			shareKey: "@angular/common",
+/******/ 			shareKey: "@angular/router",
 /******/ 		},
 /******/ 		349: {
 /******/ 			getter: () => (() => (__webpack_require__(7094))),
@@ -77801,8 +77802,8 @@ function operate(init) {
 /******/ 			},
 /******/ 			shareKey: "@mfe-prototype/shared-services",
 /******/ 		},
-/******/ 		4151: {
-/******/ 			getter: () => (() => (__webpack_require__(7097))),
+/******/ 		7603: {
+/******/ 			getter: () => (() => (__webpack_require__(2274))),
 /******/ 			shareInfo: {
 /******/ 				shareConfig: {
 /******/ 				  "fixedDependencies": false,
@@ -77813,7 +77814,7 @@ function operate(init) {
 /******/ 				},
 /******/ 				scope: ["default"],
 /******/ 			},
-/******/ 			shareKey: "@angular/router",
+/******/ 			shareKey: "@angular/common",
 /******/ 		}
 /******/ 	};
 /******/ 	var initialConsumes = [2968,219,9980,3544,8924,9922,3410,2109,541,5105,5466];
@@ -77824,12 +77825,12 @@ function operate(init) {
 /******/ 		webpackRequire: __webpack_require__
 /******/ 	}))
 /******/ 	var chunkMapping = {
-/******/ 		"151": [
-/******/ 			4151
-/******/ 		],
-/******/ 		"215": [
-/******/ 			7603,
+/******/ 		"259": [
+/******/ 			4151,
 /******/ 			349
+/******/ 		],
+/******/ 		"603": [
+/******/ 			7603
 /******/ 		],
 /******/ 		"945": [
 /******/ 			2968,
