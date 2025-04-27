@@ -1,0 +1,24 @@
+{
+  "name": "shop-api",
+  "projectType": "application",
+  "root": "apps/shop/api",
+  "sourceRoot": "apps/shop/api/src",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/shop-api",
+        "main": "apps/shop/api/src/main.ts",
+        "tsConfig": "apps/shop/api/tsconfig.app.json",
+        "assets": []
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "options": {
+        "buildTarget": "shop-api:build"
+      }
+    }
+  }
+}

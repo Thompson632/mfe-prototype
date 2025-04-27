@@ -1,0 +1,21 @@
+.top-bar {
+  height: 60px;
+  background: #1976d2;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-link, .title-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}

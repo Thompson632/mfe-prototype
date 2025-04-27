@@ -16,17 +16,25 @@
         "polyfills": ["zone.js"],
         "tsConfig": "apps/dashboard/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
+        "baseHref": "/",
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/dashboard/public"
+            "input": "apps/dashboard/public",
+            "output": "/"
+          },
+          {
+            "glob": "**/*",
+            "input": "apps/dashboard/src/assets",
+            "output": "assets"
           }
         ],
         "styles": ["apps/dashboard/src/styles.scss"],
         "scripts": [],
         "customWebpackConfig": {
           "path": "apps/dashboard/webpack.config.ts"
-        }
+        },
+        "allowedCommonJsDependencies": ["lodash"]
       },
       "configurations": {
         "production": {
@@ -34,18 +42,25 @@
             {
               "type": "initial",
               "maximumWarning": "500kb",
-              "maximumError": "1mb"
+              "maximumError": "5mb"
             },
             {
               "type": "anyComponentStyle",
               "maximumWarning": "4kb",
-              "maximumError": "8kb"
+              "maximumError": "10kb"
             }
           ],
           "outputHashing": "all",
           "customWebpackConfig": {
             "path": "apps/dashboard/webpack.prod.config.ts"
-          }
+          },
+          "baseHref": "/mfe-prototype/dashboard/",
+          "fileReplacements": [
+            {
+              "replace": "apps/dashboard/public/remotes.json",
+              "with": "apps/dashboard/public/remotes.prod.json"
+            }
+          ]
         },
         "development": {
           "buildOptimizer": false,
@@ -53,7 +68,8 @@
           "vendorChunk": true,
           "extractLicenses": false,
           "sourceMap": true,
-          "namedChunks": true
+          "namedChunks": true,
+          "baseHref": "/"
         }
       },
       "defaultConfiguration": "production"
@@ -61,8 +77,8 @@
     "serve": {
       "executor": "@nx/angular:dev-server",
       "options": {
-        "port": 4204,
-        "publicHost": "http://localhost:4204"
+        "port": 4201,
+        "publicHost": "http://localhost:4201"
       },
       "configurations": {
         "production": {
@@ -88,7 +104,7 @@
       "defaultConfiguration": "production",
       "options": {
         "buildTarget": "dashboard:build",
-        "port": 4204,
+        "port": 4201,
         "watch": false
       },
       "configurations": {

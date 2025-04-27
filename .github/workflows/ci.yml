@@ -1,0 +1,51 @@
+name: Nx Monorepo CI + GitHub Pages Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Format Check
+        run: npx nx format:check
+
+      - name: Lint All
+        run: npx nx run-many --target=lint --all
+
+      - name: Build All Apps
+        run: npm run build
+
+      - name: Test All
+        run: npx nx run-many --target=test --all
+
+  deploy:
+    needs: build-test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Deploy Host to GitHub Pages
+        run: npm run deploy

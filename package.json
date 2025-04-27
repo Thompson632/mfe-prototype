@@ -2,7 +2,21 @@
   "name": "@mfe-prototype/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "nx run-many --target=serve --projects=host,dashboard,cart,shop,about --parallel --max-parallel=5",
+    "api": "nx run-many --target=serve --projects=dashboard-api,cart-api,shop-api,about-api --parallel --max-parallel=5",
+    "build": "nx run-many --target=build --configuration=production --projects=host,dashboard,cart,shop,about --parallel --max-parallel=5",
+    "build-all": "nx run-many --target=build --configuration=production --all --parallel --max-parallel=5",
+    "test": "nx run-many --target=test --all",
+    "lint": "nx run-many --target=lint --all",
+    "format": "nx format:check",
+    "deploy:host": "npx ngh --dir=dist/apps/host --no-silent --name='CI' --email='robertdavidthompson632@gmail.com'",
+    "deploy:dashboard": "npx ngh --dir=dist/apps/dashboard --no-silent --name='CI' --email='robertdavidthompson632@gmail.com'",
+    "deploy:cart": "npx ngh --dir=dist/apps/cart --no-silent --name='CI' --email='robertdavidthompson632@gmail.com'",
+    "deploy:shop": "npx ngh --dir=dist/apps/shop --no-silent --name='CI' --email='robertdavidthompson632@gmail.com'",
+    "deploy:about": "npx ngh --dir=dist/apps/about --no-silent --name='CI' --email='robertdavidthompson632@gmail.com'",
+    "deploy": "npm run build && npm run deploy:host && npm run deploy:dashboard && npm run deploy:cart && npm run deploy:shop && npm run deploy:about"
+  },
   "private": true,
   "devDependencies": {
     "@angular-devkit/build-angular": "~19.2.0",
@@ -15,6 +29,7 @@
     "@module-federation/enhanced": "^0.9.0",
     "@nx/eslint": "20.8.1",
     "@nx/eslint-plugin": "20.8.1",
+    "@nx/express": "^20.8.1",
     "@nx/js": "20.8.1",
     "@nx/module-federation": "20.8.1",
     "@nx/web": "20.8.1",
@@ -24,7 +39,9 @@
     "@swc-node/register": "~1.9.1",
     "@swc/core": "~1.5.7",
     "@swc/helpers": "~0.5.11",
+    "@types/cors": "^2.8.17",
     "@typescript-eslint/utils": "^8.19.0",
+    "angular-cli-ghpages": "^2.0.3",
     "angular-eslint": "^19.2.0",
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^10.0.0",
@@ -42,8 +59,10 @@
     "@angular/platform-browser": "~19.2.0",
     "@angular/platform-browser-dynamic": "~19.2.0",
     "@angular/router": "~19.2.0",
+    "@nx/angular": "20.8.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
     "rxjs": "~7.8.0",
-    "zone.js": "~0.15.0",
-    "@nx/angular": "^20.8.1"
+    "zone.js": "~0.15.0"
   }
 }

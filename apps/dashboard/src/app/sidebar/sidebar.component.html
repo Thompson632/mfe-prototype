@@ -1,0 +1,9 @@
+<aside class="sidebar">
+  <div *ngFor="let remote of remotes" class="sidebar-button-wrapper">
+    <button (click)="navigateToRemote(remote)" class="sidebar-button">
+      <span class="health-indicator" [class.pulse]="isHealthy(remote.name)"
+        [style.backgroundColor]="getRemoteColor(remote.name)" [title]="getRemoteTooltip(remote.name)"></span>
+      Open {{ remote.name | titlecase }}
+    </button>
+  </div>
+</aside>

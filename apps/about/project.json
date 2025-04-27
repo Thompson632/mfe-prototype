@@ -16,6 +16,7 @@
         "polyfills": ["zone.js"],
         "tsConfig": "apps/about/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
+        "baseHref": "/",
         "assets": [
           {
             "glob": "**/*",
@@ -43,6 +44,7 @@
             }
           ],
           "outputHashing": "all",
+          "baseHref": "/mfe-prototype/about/",
           "customWebpackConfig": {
             "path": "apps/about/webpack.prod.config.ts"
           }
@@ -53,7 +55,8 @@
           "vendorChunk": true,
           "extractLicenses": false,
           "sourceMap": true,
-          "namedChunks": true
+          "namedChunks": true,
+          "baseHref": "/"
         }
       },
       "defaultConfiguration": "production"
@@ -61,8 +64,8 @@
     "serve": {
       "executor": "@nx/angular:dev-server",
       "options": {
-        "port": 4203,
-        "publicHost": "http://localhost:4203"
+        "port": 4204,
+        "publicHost": "http://localhost:4204"
       },
       "configurations": {
         "production": {
@@ -88,7 +91,7 @@
       "defaultConfiguration": "production",
       "options": {
         "buildTarget": "about:build",
-        "port": 4203,
+        "port": 4204,
         "watch": false
       },
       "configurations": {

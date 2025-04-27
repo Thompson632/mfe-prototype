@@ -1,0 +1,35 @@
+.dashboard-layout {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+.dashboard-main {
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.loading-spinner {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+section {
+  margin-top: 20px;
+}
+
+li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.health-dashboard {
+  margin-bottom: 2rem;
+}
+
+section.health-dashboard h2 {
+  font-size: 20px;
+  margin-bottom: 1rem;
+}

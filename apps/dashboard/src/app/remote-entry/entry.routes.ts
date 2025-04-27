@@ -1,6 +1,9 @@
-import { Route } from '@angular/router';
-import { RemoteEntryComponent } from './entry.component';
+import { Routes } from '@angular/router';
+import { DashboardComponent } from '../dashboard/dashboard.component';
 
-export const remoteRoutes: Route[] = [
-  { path: '', component: RemoteEntryComponent },
+export const remoteRoutes: Routes = [
+  {
+    path: '',
+    component: DashboardComponent
+  }
 ];

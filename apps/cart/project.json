@@ -16,6 +16,7 @@
         "polyfills": ["zone.js"],
         "tsConfig": "apps/cart/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
+        "baseHref": "/",
         "assets": [
           {
             "glob": "**/*",
@@ -43,6 +44,7 @@
             }
           ],
           "outputHashing": "all",
+          "baseHref": "/mfe-prototype/cart/",
           "customWebpackConfig": {
             "path": "apps/cart/webpack.prod.config.ts"
           }
@@ -53,7 +55,8 @@
           "vendorChunk": true,
           "extractLicenses": false,
           "sourceMap": true,
-          "namedChunks": true
+          "namedChunks": true,
+          "baseHref": "/"
         }
       },
       "defaultConfiguration": "production"

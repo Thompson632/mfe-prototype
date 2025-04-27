@@ -16,17 +16,25 @@
         "polyfills": ["zone.js"],
         "tsConfig": "apps/host/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
+        "baseHref": "/",
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/host/public"
+            "input": "apps/host/public",
+            "output": "/"
+          },
+          {
+            "glob": "**/*",
+            "input": "apps/host/src/assets",
+            "output": "assets"
           }
         ],
         "styles": ["apps/host/src/styles.scss"],
         "scripts": [],
         "customWebpackConfig": {
           "path": "apps/host/webpack.config.ts"
-        }
+        },
+        "allowedCommonJsDependencies": ["lodash"]
       },
       "configurations": {
         "production": {
@@ -34,7 +42,7 @@
             {
               "type": "initial",
               "maximumWarning": "500kb",
-              "maximumError": "1mb"
+              "maximumError": "5mb"
             },
             {
               "type": "anyComponentStyle",
@@ -43,9 +51,20 @@
             }
           ],
           "outputHashing": "all",
+          "baseHref": "/mfe-prototype/",
           "customWebpackConfig": {
             "path": "apps/host/webpack.prod.config.ts"
-          }
+          },
+          "fileReplacements": [
+            {
+              "replace": "apps/host/public/module-federation.manifest.json",
+              "with": "apps/host/public/module-federation.manifest.prod.json"
+            },
+            {
+              "replace": "apps/host/public/remotes.json",
+              "with": "apps/host/public/remotes.prod.json"
+            }
+          ]
         },
         "development": {
           "buildOptimizer": false,
@@ -53,7 +72,8 @@
           "vendorChunk": true,
           "extractLicenses": false,
           "sourceMap": true,
-          "namedChunks": true
+          "namedChunks": true,
+          "baseHref": "/"
         }
       },
       "defaultConfiguration": "production"

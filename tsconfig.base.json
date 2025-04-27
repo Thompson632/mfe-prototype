@@ -8,13 +8,14 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es2015",
+    "target": "es2020",
     "module": "esnext",
     "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@mfe-prototype/shared-services": ["libs/shared-services/src/index.ts"],
       "about/Routes": ["apps/about/src/app/remote-entry/entry.routes.ts"],
       "cart/Routes": ["apps/cart/src/app/remote-entry/entry.routes.ts"],
       "dashboard/Routes": [
