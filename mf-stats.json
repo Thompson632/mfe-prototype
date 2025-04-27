@@ -1,15 +1,15 @@
 {
-  "id": "host",
-  "name": "host",
+  "id": "dashboard",
+  "name": "dashboard",
   "metaData": {
-    "name": "host",
+    "name": "dashboard",
     "type": "app",
     "buildInfo": {
       "buildVersion": "0.0.0",
       "buildName": "@mfe-prototype/source"
     },
     "remoteEntry": {
-      "name": "",
+      "name": "remoteEntry.mjs",
       "path": "",
       "type": "module"
     },
@@ -19,7 +19,7 @@
       "zip": "",
       "api": ""
     },
-    "globalName": "host",
+    "globalName": "dashboard",
     "pluginVersion": "0.9.1",
     "prefetchInterface": false,
     "publicPath": "auto"
@@ -33,15 +33,17 @@
       "eager": true,
       "name": "@angular/common/http",
       "version": "19.2.8",
-      "id": "host:@angular/common/http",
+      "id": "dashboard:@angular/common/http",
       "assets": {
         "js": {
           "async": [
-            "708.e0ceb06999141964.js"
+            "801.aa24b14742d9d1dd.js",
+            "common.427206c04004bd55.js"
           ],
           "sync": [
-            "polyfills.02ea0428d4c0d3a7.js",
-            "main.cbbc30512f221e9e.js"
+            "polyfills.b3a97fc8420b2e3e.js",
+            "main.a5ed9ea180b3fe0b.js",
+            "remoteEntry.mjs"
           ]
         },
         "css": {
@@ -61,15 +63,17 @@
       "eager": true,
       "name": "@angular/common",
       "version": "19.2.8",
-      "id": "host:@angular/common",
+      "id": "dashboard:@angular/common",
       "assets": {
         "js": {
           "async": [
-            "708.e0ceb06999141964.js"
+            "801.aa24b14742d9d1dd.js",
+            "common.427206c04004bd55.js"
           ],
           "sync": [
-            "polyfills.02ea0428d4c0d3a7.js",
-            "main.cbbc30512f221e9e.js"
+            "polyfills.b3a97fc8420b2e3e.js",
+            "main.a5ed9ea180b3fe0b.js",
+            "remoteEntry.mjs"
           ]
         },
         "css": {
@@ -89,15 +93,17 @@
       "name": "@angular/core/primitives/di",
       "version": "19.2.8",
       "eager": false,
-      "id": "host:@angular/core/primitives/di",
+      "id": "dashboard:@angular/core/primitives/di",
       "assets": {
         "js": {
           "async": [
-            "708.e0ceb06999141964.js"
+            "801.aa24b14742d9d1dd.js",
+            "common.427206c04004bd55.js"
           ],
           "sync": [
-            "polyfills.02ea0428d4c0d3a7.js",
-            "main.cbbc30512f221e9e.js"
+            "polyfills.b3a97fc8420b2e3e.js",
+            "main.a5ed9ea180b3fe0b.js",
+            "remoteEntry.mjs"
           ]
         },
         "css": {
@@ -117,15 +123,17 @@
       "eager": true,
       "name": "@angular/core/primitives/signals",
       "version": "19.2.8",
-      "id": "host:@angular/core/primitives/signals",
+      "id": "dashboard:@angular/core/primitives/signals",
       "assets": {
         "js": {
           "async": [
-            "708.e0ceb06999141964.js"
+            "801.aa24b14742d9d1dd.js",
+            "common.427206c04004bd55.js"
           ],
           "sync": [
-            "polyfills.02ea0428d4c0d3a7.js",
-            "main.cbbc30512f221e9e.js"
+            "polyfills.b3a97fc8420b2e3e.js",
+            "main.a5ed9ea180b3fe0b.js",
+            "remoteEntry.mjs"
           ]
         },
         "css": {
@@ -145,15 +153,17 @@
       "eager": true,
       "name": "@angular/core",
       "version": "19.2.8",
-      "id": "host:@angular/core",
+      "id": "dashboard:@angular/core",
       "assets": {
         "js": {
           "async": [
-            "708.e0ceb06999141964.js"
+            "801.aa24b14742d9d1dd.js",
+            "common.427206c04004bd55.js"
           ],
           "sync": [
-            "polyfills.02ea0428d4c0d3a7.js",
-            "main.cbbc30512f221e9e.js"
+            "polyfills.b3a97fc8420b2e3e.js",
+            "main.a5ed9ea180b3fe0b.js",
+            "remoteEntry.mjs"
           ]
         },
         "css": {
@@ -173,15 +183,17 @@
       "eager": true,
       "name": "@angular/platform-browser",
       "version": "19.2.8",
-      "id": "host:@angular/platform-browser",
+      "id": "dashboard:@angular/platform-browser",
       "assets": {
         "js": {
           "async": [
-            "708.e0ceb06999141964.js"
+            "801.aa24b14742d9d1dd.js",
+            "common.427206c04004bd55.js"
           ],
           "sync": [
-            "polyfills.02ea0428d4c0d3a7.js",
-            "main.cbbc30512f221e9e.js"
+            "polyfills.b3a97fc8420b2e3e.js",
+            "main.a5ed9ea180b3fe0b.js",
+            "remoteEntry.mjs"
           ]
         },
         "css": {
@@ -201,15 +213,17 @@
       "eager": true,
       "name": "@angular/router",
       "version": "19.2.8",
-      "id": "host:@angular/router",
+      "id": "dashboard:@angular/router",
       "assets": {
         "js": {
           "async": [
-            "708.e0ceb06999141964.js"
+            "801.aa24b14742d9d1dd.js",
+            "common.427206c04004bd55.js"
           ],
           "sync": [
-            "polyfills.02ea0428d4c0d3a7.js",
-            "main.cbbc30512f221e9e.js"
+            "polyfills.b3a97fc8420b2e3e.js",
+            "main.a5ed9ea180b3fe0b.js",
+            "remoteEntry.mjs"
           ]
         },
         "css": {
@@ -229,15 +243,17 @@
       "eager": true,
       "name": "@mfe-prototype/shared-services",
       "version": "0.0.0",
-      "id": "host:@mfe-prototype/shared-services",
+      "id": "dashboard:@mfe-prototype/shared-services",
       "assets": {
         "js": {
           "async": [
-            "708.e0ceb06999141964.js"
+            "801.aa24b14742d9d1dd.js",
+            "common.427206c04004bd55.js"
           ],
           "sync": [
-            "polyfills.02ea0428d4c0d3a7.js",
-            "main.cbbc30512f221e9e.js"
+            "polyfills.b3a97fc8420b2e3e.js",
+            "main.a5ed9ea180b3fe0b.js",
+            "remoteEntry.mjs"
           ]
         },
         "css": {
@@ -253,19 +269,21 @@
       "singleton": true,
       "requiredVersion": "^7.8.2",
       "shareScope": "default",
-      "strictVersion": true,
+      "strictVersion": false,
       "eager": true,
       "name": "rxjs/operators",
       "version": "7.8.2",
-      "id": "host:rxjs/operators",
+      "id": "dashboard:rxjs/operators",
       "assets": {
         "js": {
           "async": [
-            "708.e0ceb06999141964.js"
+            "801.aa24b14742d9d1dd.js",
+            "common.427206c04004bd55.js"
           ],
           "sync": [
-            "polyfills.02ea0428d4c0d3a7.js",
-            "main.cbbc30512f221e9e.js"
+            "polyfills.b3a97fc8420b2e3e.js",
+            "main.a5ed9ea180b3fe0b.js",
+            "remoteEntry.mjs"
           ]
         },
         "css": {
@@ -281,19 +299,21 @@
       "singleton": true,
       "requiredVersion": "^7.8.2",
       "shareScope": "default",
-      "strictVersion": true,
+      "strictVersion": false,
       "eager": true,
       "name": "rxjs",
       "version": "7.8.2",
-      "id": "host:rxjs",
+      "id": "dashboard:rxjs",
       "assets": {
         "js": {
           "async": [
-            "708.e0ceb06999141964.js"
+            "801.aa24b14742d9d1dd.js",
+            "common.427206c04004bd55.js"
           ],
           "sync": [
-            "polyfills.02ea0428d4c0d3a7.js",
-            "main.cbbc30512f221e9e.js"
+            "polyfills.b3a97fc8420b2e3e.js",
+            "main.a5ed9ea180b3fe0b.js",
+            "remoteEntry.mjs"
           ]
         },
         "css": {
@@ -307,5 +327,23 @@
     }
   ],
   "remotes": [],
-  "exposes": []
+  "exposes": [
+    {
+      "path": "./Routes",
+      "id": "dashboard:Routes",
+      "name": "Routes",
+      "requires": [],
+      "file": "apps/dashboard/src/app/remote-entry/entry.routes.ts",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": []
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    }
+  ]
 }
